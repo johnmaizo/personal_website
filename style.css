@@ -70,14 +70,12 @@ ul, li, a {
 
 .hero_expanded {
     height: 100vh;
-
     box-shadow: inset 0 0 0 1000vh rgba(0, 0, 0, 0.2);
 }
 
 header .header_container {
     position: fixed;
     width: 100%;
-
     transition: 300ms ease-in-out;
     z-index: 1000;
 }
@@ -114,11 +112,10 @@ header nav ul li a {
         top: 25px;
         transition: 0.3s;
     }
-    
+
     header nav ul li a:hover:before {
         width: 120%;
     }
-    
 }
 
 /* Navigation */
@@ -130,7 +127,6 @@ header .buttony {
 @media (max-width: 50em) {
     header .primary_nav {
         display: none;
-
         position: fixed;
         z-index: 10;
         background-color: #110736f7;
@@ -170,7 +166,6 @@ header .buttony {
         position: fixed;
     }
 
-
     header .buttony {
         display: block;
         cursor: pointer;
@@ -190,13 +185,9 @@ header .buttony {
 }
 
 
-
-
-
 /* Slogan Module */
 
 .slogan_module {
-    /* padding-block-start: 250px; */
     text-align: center;
 }
 
@@ -250,7 +241,6 @@ header .buttony {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    
 }
 
 @media (max-width: 50em) {
@@ -310,11 +300,9 @@ header .buttony {
 
 .about_module {
     padding-block: 100px;
-    /* background: rgb(2,0,36);
-    background: linear-gradient(183deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(151,197,207,1) 100%); */
-    
+
     background: rgb(2,0,36);
-    background: linear-gradient(185deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(51,65,68,1) 100%);
+background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(83,94,142,1) 100%);
 }
 
 .about_module h1 {
@@ -335,17 +323,14 @@ header .buttony {
     max-width: 15rem;
     margin-inline: auto;
     position: relative;
-    
 }
 
 .about_module .circle {
     position: absolute;
     inset: auto 0 0;
     aspect-ratio: 1;
-
     object-fit: cover;
     border-radius: 50%;
-
     width: 100%;
 }
 
@@ -354,7 +339,6 @@ header .buttony {
 
     position: relative;
     z-index: 1;
-
     width: 100%;
     transition: transform var(--transform-speed) ease;
 }
@@ -369,13 +353,10 @@ header .buttony {
     --transform-speed: 250ms;
 
     aspect-ratio: 1 / 1.5;
-
     display: grid;
     align-items: end;
-
     border-radius: 0 0 100vw 100vw;
     overflow: hidden;
-
     transition: transform var(--transform-speed) ease;
 }
 
@@ -416,7 +397,7 @@ header .buttony {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 39em;
+    max-width: 43em;
 }
 
 .about_module .skills .box {
@@ -426,7 +407,9 @@ header .buttony {
     text-align: center;
     padding: 10px;
 
-    width: 8.125em;
+    width: 7.4em;
+    font-weight: 600;
+    font-size: 1.25rem;
     position: relative;
 
     transition: 250ms ease-in-out;
@@ -456,6 +439,7 @@ header .buttony {
 
     .about_module .biography .biography_text {
         text-align: center;
+        padding-inline-end: 0;
     }
 
     .about_module .skills {
@@ -463,5 +447,207 @@ header .buttony {
         margin-inline: auto;
     }
 }
+
+
+/* Education Section */
+
+.education_module {
+    background-color: #0A0F1F;
+    padding-block: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.education_module::before {
+    content: '';
+    position: absolute;
+    width: 48.25em;
+    height: 48.25em;
+    border-radius: 50%;
+    background-color: rgba(97, 154, 217, 0.1);
+    left: 70%;
+    bottom: 62%;
+}
+
+.education_module::after {
+    content: '';
+    position: absolute;
+    width: 48.25em;
+    height: 48.25em;
+    border-radius: 50%;
+    background-color: rgba(97, 154, 217, 0.1);
+    top: 50%;
+    right: 75%;
+}
+
+.education_module .educ_title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-block-end: 100px;
+}
+
+.education_module .linya_with_ball {
+    background: url("image/linyaWithball.png") no-repeat top / cover;
+    width: 0.75em;
+    height: 55.188em;
+    position: absolute;
+    left: 50%;
+}
+
+.education_module .education_box {
+    background-color: #fff;
+    color: #000;
+    max-width: 30.125em;
+    padding: 1em;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.education_module .education_box h1 {
+    font-weight: 600;
+    color: #5AA2D7;
+    font-size: 1.75rem;
+    padding-block-end: 0.6em;
+}
+
+.education_module .education_box .grad_icon {
+    color: #fff;
+    background-color:#5AA2D7;
+    padding: 0.3em;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.education_module .education_box .school_text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #949494;
+}
+
+.education_module .education_box .school_location {
+    color: #949494;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-block: 10px;
+}
+
+.education_module .education_box .school_date {
+    display: block;
+    color: #464646;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: #D9D9D9;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 6em;
+    text-align: center; 
+}
+
+.education_module .education_box .custom_width_date {
+    max-width: 8em;
+}
+
+.education_module .education_box .text_area {
+    max-width: 25em;
+}
+
+.education_module .education_box .custom_width {
+    padding-inline-end: 150px;
+}
+
+.education_module .education_box {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+@media (max-width: 62em) {
+    .education_module .education_box {
+        max-width: 21em;
+    }
+}
+
+@media (min-width:50em) {
+    .education_module .row_template {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2em;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .education_module .push_right {
+        position: relative;
+        left: 25%;
+    }
+    
+    .education_module .push_left {
+        position: relative;
+        right: 25%;
+    }
+}
+
+@media (max-width: 50em) {
+    .education_module .row_template {
+        display: grid;
+        gap: 6.25rem;
+        justify-content: center;
+        position: relative;
+    }
+
+    .education_module .push_right {
+        left: 0;
+    }
+    
+    .education_module .push_left {
+        right: 0;
+    }
+    
+    .education_module .linya_with_ball {
+        background: #5AA2D7;
+        position: absolute;
+        bottom: 177px;
+        width: 3px;
+    }
+
+    .education_module .education_box {
+        max-width: 30.125em;
+    }
+
+    .education_module .education_box .custom_width {
+        padding-inline-end: 80px;
+    }
+
+    .education_module .education_box .school_date {
+        max-width: 8em;
+        margin-inline: auto;
+        margin-inline-start: 5.1em;   
+    }
+
+    .education_module .education_box .custom_width_date  {
+        margin-inline-start: 1.8em;
+    }
+
+    .education_module .education_box .date1 {
+        margin-inline-start: 3.95em;
+    }
+
+    .education_module .education_box {
+        max-width: auto;
+    }
+
+    .education_module .education_box .text_area {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
 
 
