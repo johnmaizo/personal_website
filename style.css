@@ -454,8 +454,9 @@ header .buttony {
     }
 
     .about_module .biography .biography_text {
-        text-align: center;
+        text-align:justify;
         padding-inline-end: 0;
+        max-width: 24em;
     }
 
     .about_module .skills {
