@@ -212,6 +212,8 @@ header .buttony {
 .slogan_module .container p {
     font-size: 1.625rem;
     font-weight: 400;
+    font-family: 'Martian Mono', monospace;
+    padding-block-start: 0.3em;
 }
 
 .slogan_module .container .line_right {
@@ -555,7 +557,7 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
 }
 
 .education_module .education_box .custom_width {
-    padding-inline-end: 150px;
+    padding-inline-end: 140px;
 }
 
 .education_module .education_box {
@@ -564,9 +566,14 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
     justify-content: space-between;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 65.125em) {
     .education_module .education_box {
         max-width: 21em;
+    }
+
+    .education_module .education_box .custom_width {
+        max-width: 17em;
+        padding-inline-end: 0;
     }
 }
 
@@ -618,7 +625,9 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
     }
 
     .education_module .education_box .custom_width {
-        padding-inline-end: 80px;
+        max-width: 17em;
+        padding-inline-end: 5em;
+        margin-inline-end: 50px;
     }
 
     .education_module .education_box .school_date {
@@ -628,7 +637,7 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
     }
 
     .education_module .education_box .custom_width_date  {
-        margin-inline-start: 1.8em;
+        margin-inline-start: 0.7em;
     }
 
     .education_module .education_box .date1 {
@@ -641,6 +650,27 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
 
     .education_module .education_box .text_area {
         text-align: center;
+    }
+}
+
+@media (max-width: 33.125em) {
+    .education_module .education_box {
+        max-width: 17.125em;
+    }
+
+    .education_module .education_box .school_date {
+        margin-inline: auto;
+        margin-inline-start: 0;
+    }
+
+    .education_module .education_box .custom_width {
+        max-width: 17em;
+        padding-inline-end: 0;
+        margin-inline-end: 0;
+    }
+
+    .education_module .linya_with_ball {
+        top: 480px;
     }
 }
 
