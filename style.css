@@ -81,7 +81,7 @@ header .header_container {
 }
 
 header .header_container:is(:hover, :focus-within) {
-    background-color: rgba(0, 255, 255, 0.323);
+    background-color: #243854e4;
 }
 
 header nav ul {
@@ -206,6 +206,7 @@ header .buttony {
 .slogan_module .container .line_left {
     width: 10%;
     float: left;
+    height: 0.4em;
     background-color: #D9D9D9;
 }
 
@@ -219,6 +220,7 @@ header .buttony {
 .slogan_module .container .line_right {
     width: 10%;
     float: right;
+    height: 0.4em;
     background-color: #D9D9D9;
 }
 
@@ -674,3 +676,147 @@ header .buttony {
     }
 }
 
+/* Work Section */
+
+.work_module {
+    background-color: #0F1730;
+    padding-block: 6.25em;
+}
+
+.work_module .head {
+    font-size: 2.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-block-end: 1.5em;
+}
+
+.work_module .titles {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.work_module .line {
+    height: 3px;
+    background-color: #2C516B;
+    max-width: 90%;
+    margin-inline: auto;
+    margin-block: 5em;
+    border: 0;
+}
+
+.work_module .box {
+    width: 21.875em;
+    height: 18.125em;
+}
+
+.work_module .flex_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-block-start: 2em;
+    flex-wrap: wrap;
+}
+
+.work_module .show {
+    text-align: center;
+    font-weight: 600;
+    padding-block-end: 2.35em;
+    background-color: rgba(12, 12, 12, 0.949);
+}
+
+.work_module .show h1 {
+    padding-block-start: 1.5em;
+    font-size: 1.25rem;
+}
+
+.work_module .show p {
+    white-space: pre-line;
+    padding-block: 3.5em;
+}
+
+.work_module .show a {
+    display: block;
+    background-color: #55CB97;
+    border-radius: 20px;
+    max-width: 13em;
+    line-height: 2.5;
+    margin-inline: auto;
+    color: #fff;
+
+    transition: 350ms ease;
+}
+
+.work_module .show a:is(:hover, :focus-within) {
+    color: #55CB97;
+    background-color: #fff;
+}
+
+.work_module .john_cycling {
+    background: url("image/works/johncyclingshop.jpg") no-repeat top / cover;
+}
+
+.work_module .coming_soon {
+    background: url("image/works/coming_soon.jpg") no-repeat top / cover;
+}
+
+.work_module .java1 {
+    background: url("image/works/java1.jpg") no-repeat top / cover;
+}
+
+.work_module .java2 {
+    background: url("image/works/java2.jpg") no-repeat top / cover;
+}
+
+.work_module .java3 {
+    background: url("image/works/java3.jpg") no-repeat top / cover;
+}
+
+.work_module .c1 {
+    background: url("image/works/c1.jpg") no-repeat top / cover;
+}
+
+.work_module .c2 {
+    background: url("image/works/c2.jpg") no-repeat top / cover;
+}
+
+.work_module .c3 {
+    background: url("image/works/c3.jpg") no-repeat top / cover;
+}
+
+.work_module .show {
+    display: none;
+}
+
+.work_module .box:is(:hover, :focus-within) > .show {
+    display: block;
+}
+
+@media (min-width: 50em) {
+    .work_module .john_cycling .show p {
+        padding-block: 3em;
+    }
+}
+
+@media (max-width: 50em) {
+    .work_module .box {
+        width: 16.875em;
+        height: 13.125em;
+    }
+
+    .work_module .show {
+        padding: 1em;
+    }
+
+    .work_module .show h1 {
+        padding-block-start: 0;
+    }
+    
+    .work_module .show p {
+        padding-block: 1.5em;
+    }
+    
+    .work_module .show2 p {
+        padding-block: 0.7em;
+    }
+}
