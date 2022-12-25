@@ -559,7 +559,14 @@ header .buttony {
     padding: 5px;
     border-radius: 10px;
     max-width: 6em;
-    text-align: center; 
+    text-align: center;
+    
+    transition: 200ms ease-in-out;
+}
+
+.education_module .education_box .school_date:is(:hover, :focus-within) {
+    background-color: #464646;
+    color: #D9D9D9;
 }
 
 .education_module .education_box .custom_width_date {
@@ -839,5 +846,220 @@ header .buttony {
     
     .work_module .show2 p {
         padding-block: 0.7em;
+    }
+}
+
+/* Contact Section */
+
+.contact_module {
+    background-color: #111523;
+    padding-block-start: 6.25em;
+    padding-block-end: 3em;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact_module .title {
+    font-size: 2.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-block-end: 2em;
+}
+
+.contact_module::before {
+    content: '';
+    position: absolute;
+    width: 48.25em;
+    height: 48.25em;
+    transform: rotate(-15deg);
+    background-color: rgba(97, 154, 217, 0.1);
+    bottom: 78%;
+    left: 65%;
+}
+
+.contact_module::after {
+    content: '';
+    position: absolute;
+    width: 48.25em;
+    height: 48.25em;
+    border-radius: 50%;
+    background-color: rgba(97, 154, 217, 0.1);
+    top: 50%;
+    right: 70%;
+}
+
+.contact_module .text_area h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.contact_module .text_area p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 27.24px;
+    padding-block-start: 2em;
+}
+
+.contact_module .text_area {
+    max-width: 29em;
+    margin-block-end: 17em;
+}
+
+.contact_module .fill_up_area {
+    max-width: 30em;
+    position: relative;
+    z-index: 1;
+}
+
+.contact_module .fill_up_area .text {
+    width: 100%;
+    border: 0;
+    margin-block: 0.6em;
+    background-color: #D9D9D9;
+    color: #000;
+    font-weight: 600;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.contact_module .fill_up_area .text::placeholder {
+    color: #7C7777;
+    font-weight: 600;
+}
+
+#message {
+    height: auto;
+    resize: none;
+}
+
+.contact_module .column_template {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+}
+
+.contact_module .fill_up_area .button {
+    border: 0;
+    font-weight: 600;
+    color: #fff;
+    background-color: #41A6E7;
+    cursor: pointer;
+    display: block;
+    padding: 0.25em 1.2em;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-block-start: 1em;
+    margin-inline-start: auto;
+
+    transition: 300ms ease-in-out;
+}
+
+.contact_module .fill_up_area .button:is(:hover, :focus-within) {
+    background-color: #fff;
+    color: #41A6E7;
+}
+
+@media (max-width: 50em) {
+    .contact_module .text_area {
+        text-align: center;
+        margin-block-end: 0;
+    }
+
+    .contact_module .text_area h1 {
+        font-size: 2rem;
+    }
+    
+    .contact_module .column_template {
+        grid-template-columns: none;
+        gap: 2.5em;
+    }
+
+    .contact_module .fill_up_area .button {
+        margin-inline: auto;
+        padding: 0.6em 1em;
+        margin-block-end: 4em;
+    }
+
+}
+
+@media (max-width: 68.125em) {
+    .contact_module .fill_up_area {
+        max-width: auto;
+    }
+
+    .contact_module .column_template {
+        gap: 1em;
+    }
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #0A0F1F;
+}
+
+footer i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+footer .up {
+    font-size: 2.2rem;
+    background-color: #55CB97;
+    padding: 0.5em;
+    border-radius: 50%;
+    position: relative;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    transition: 350ms ease-in-out;
+}
+
+footer .up:is(:hover, :focus-within) {
+    color: #55CB97;
+    background-color: #fff;
+}
+
+footer .flex_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-block-start: 4em;
+    margin-block-end: 3em;
+}
+
+footer .flex_wrapper a i {
+    background-color: #1C384A;
+    padding: 0.3em;
+    border-radius: 10px;
+}
+
+footer .flex_wrapper a i:is(:hover, :focus-within) {
+    background-color: rgba(210, 215, 219, 0.3);
+}
+
+footer .flex_wrapper .linked_in {
+    padding: 0.3em 0.41em;
+}
+
+footer .flex_wrapper .facebook {
+    padding: 0.3em 0.51em;
+}
+
+footer .copyright {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-block-end: 2em;
+}
+
+@media (max-width: 50em) {
+    footer .flex_wrapper {
+        margin-block-start: 1em;
     }
 }
