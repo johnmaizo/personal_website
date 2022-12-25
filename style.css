@@ -211,10 +211,10 @@ header .buttony {
 }
 
 .slogan_module .container p {
-    font-size: 1.625rem;
+    font-size: 1.2rem;
     font-weight: 400;
     font-family: 'Martian Mono', monospace;
-    padding-block-start: 0.3em;
+    padding-block-start: 0.5em;
 }
 
 .slogan_module .container .line_right {
@@ -249,11 +249,11 @@ header .buttony {
 
 @media (max-width: 50em) {
     .slogan_module .container h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .slogan_module .container h2 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         margin-block: 1rem;
     }
 
@@ -279,7 +279,7 @@ header .buttony {
     }
 
     .slogan_module .container p {
-        font-size: 1.5rem;
+        font-size: 1rem;
         max-width: 32ch;
         text-align: center;
         margin-inline: auto;
@@ -454,15 +454,22 @@ header .buttony {
     }
 
     .about_module .biography .biography_text {
-        text-align:justify;
         padding-inline-end: 0;
         padding-inline: 1em;
         line-height: 1.8;
+        text-align: center;
+        max-width: 40em;
     }
 
     .about_module .skills {
         margin-block-start: 100px;
         margin-inline: auto;
+    }
+}
+
+@media (max-width: 30.625em) {
+    .about_module .biography .biography_text {
+        text-align:justify;
     }
 }
 
@@ -838,6 +845,10 @@ header .buttony {
 
     .work_module .show {
         padding: 1em;
+    }
+
+    .work_module .titles {
+        text-align: center;
     }
 
     .work_module .show h1 {
