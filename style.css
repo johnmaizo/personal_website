@@ -1048,7 +1048,7 @@ footer .upp {
     display: block;
     position: relative;
     bottom: 2em;
-    max-width: 3.55em;
+    max-width: 3.4em;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 50%;
@@ -1113,6 +1113,6 @@ footer .copyright {
 
     footer .upp {
         bottom: 1.5em;
-        max-width: 2.9em;
+        max-width: 2.75em;
     }
 }
