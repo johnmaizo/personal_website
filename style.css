@@ -457,6 +457,7 @@ header .buttony {
         text-align:justify;
         padding-inline-end: 0;
         padding-inline: 1em;
+        line-height: 1.8;
     }
 
     .about_module .skills {
