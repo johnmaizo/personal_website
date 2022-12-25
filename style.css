@@ -428,7 +428,19 @@ header .buttony {
 }
 
 .about_module .skills .box p {
-    line-height: 45px; 
+    margin-block-start: 20px;
+}
+
+.about_module .skills .box .box_c {
+    margin-block-start: 10px;
+}
+
+.about_module .skills .box .box_css {
+    margin-block-start: 12px;
+}
+
+.about_module .skills .box .box_html {
+    margin-block-start: 5px;
 }
 
 @media (max-width: 50em) {
@@ -672,7 +684,16 @@ header .buttony {
     }
 
     .education_module .linya_with_ball {
-        top: 480px;
+        top: 440px;
+        height: 60em;
+    }
+
+    .education_module .education_box {
+        justify-content: none;
+    }
+
+    .education_module #text_area {
+        text-align: left;
     }
 }
 
