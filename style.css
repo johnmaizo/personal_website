@@ -456,7 +456,7 @@ header .buttony {
     .about_module .biography .biography_text {
         text-align:justify;
         padding-inline-end: 0;
-        max-width: 24em;
+        padding-inline: 1em;
     }
 
     .about_module .skills {
@@ -464,6 +464,7 @@ header .buttony {
         margin-inline: auto;
     }
 }
+
 
 
 /* Education Section */
