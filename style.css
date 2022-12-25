@@ -1036,7 +1036,7 @@ footer .flex_wrapper {
 footer .flex_wrapper a i {
     background-color: #1C384A;
     padding: 0.3em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 footer .flex_wrapper a i:is(:hover, :focus-within) {
