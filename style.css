@@ -510,6 +510,7 @@ header .buttony {
     height: 55.188em;
     position: absolute;
     left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .education_module .education_box {
