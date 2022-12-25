@@ -304,7 +304,7 @@ header .buttony {
     padding-block: 100px;
 
     background: rgb(2,0,36);
-background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(83,94,142,1) 100%);
+    background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(83,94,142,1) 100%);
 }
 
 .about_module h1 {
@@ -673,11 +673,4 @@ background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba
         top: 480px;
     }
 }
-
-
-
-
-
-
-
 
