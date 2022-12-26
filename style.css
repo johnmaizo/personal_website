@@ -148,7 +148,7 @@ header .buttony {
     header .primary_nav li a {
         text-transform: uppercase;
         color: #fff;
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         position: relative;
         display: block;
         width: 100%;
@@ -737,6 +737,13 @@ header .buttony {
 
     .education_module #text_area {
         text-align: left;
+    }
+}
+
+@media (max-width: 33.125em) {
+    .education_module .linya_with_ball {
+        top: 2em;
+        height: 60em;
     }
 }
 
