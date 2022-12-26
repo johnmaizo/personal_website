@@ -1084,8 +1084,7 @@ footer .flex_wrapper {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
-    margin-block-start: 4em;
-    margin-block-end: 3em;
+    margin-block: 2em;
 }
 
 footer .flex_wrapper a i {
@@ -1125,5 +1124,13 @@ footer .copyright {
     footer .upp {
         bottom: 1.5em;
         max-width: 2.75em;
+    }
+    
+    footer .flex_wrapper a i {
+        font-size: 1.35rem;
+    }
+
+    footer .copyright {
+        font-size: 0.6rem;
     }
 }
