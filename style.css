@@ -400,6 +400,7 @@ header .buttony {
     font-weight: 400;
     font-size: 1.125rem;
     padding-inline-end: 10px;
+    text-align: justify;
 }
 
 .about_module .grid_column {
