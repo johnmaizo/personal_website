@@ -726,11 +726,6 @@ header .buttony {
         margin-inline-end: 0;
     }
 
-    .education_module .linya_with_ball {
-        top: 440px;
-        height: 60em;
-    }
-
     .education_module .education_box {
         justify-content: none;
     }
@@ -742,8 +737,14 @@ header .buttony {
 
 @media (max-width: 33.125em) {
     .education_module .linya_with_ball {
-        top: 2em;
+        top: 20em;
         height: 60em;
+    }
+}
+
+@media (max-width: 17.313em) {
+    .education_module .linya_with_ball {
+        height: 85em;
     }
 }
 
