@@ -73,31 +73,6 @@ ul, li, a {
     box-shadow: inset 0 0 0 1000vh rgba(0, 0, 0, 0.2);
 }
 
-header .header_container {
-    position: fixed;
-    width: 100%;
-    transition: 300ms ease-in-out;
-    z-index: 1000;
-}
-
-header .header_container:is(:hover, :focus-within) {
-    background-color: #243854e4;
-}
-
-header nav ul {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    padding-block: 1.55em;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative;
-    margin-inline: auto;
-}
 
 @media (min-width: 50em) {
     header nav ul li a::before {
@@ -115,6 +90,32 @@ header nav ul li a {
 
     header nav ul li a:hover:before {
         width: 120%;
+    }
+
+    header .header_container {
+        position: fixed;
+        width: 100%;
+        transition: 300ms ease-in-out;
+        z-index: 1000;
+    }
+    
+    header .header_container:is(:hover, :focus-within) {
+        background-color: #243854e4;
+    }
+    
+    header nav ul {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+        padding-block: 1.55em;
+    }
+    
+    header nav ul li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        margin-inline: auto;
     }
 }
 
@@ -163,7 +164,7 @@ header .buttony {
 
     header .primary_nav[data-visible] {
         display: block;
-        position: fixed;
+        position: absolute;
     }
 
     header .buttony {
@@ -173,7 +174,7 @@ header .buttony {
         border: 0;
         padding: 0.5em;
         right: 0;
-        position: fixed;
+        position: absolute;
         top: 0; 
         font-size: 2rem;   
         z-index: 1;
@@ -280,7 +281,7 @@ header .buttony {
 
     .slogan_module .container p {
         font-size: 1rem;
-        max-width: 32ch;
+        max-width: 26em;
         text-align: center;
         margin-inline: auto;
     }
@@ -313,6 +314,61 @@ header .buttony {
     }
 }
 
+@media (max-width: 80em) {
+    .slogan_module .container h1 {
+        font-size: 1.7rem;
+    }   
+
+    .slogan_module .container h2 {
+        font-size: 3rem;
+    }
+
+    .slogan_module .container p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 52.813em) {
+    .slogan_module .container h2 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 30.625em) {
+    .slogan_module .container h1 {
+        font-size: 1.4rem;
+    }
+
+    .slogan_module .container h2 {
+        font-size: 2.3rem;
+    }
+
+    .slogan_module .container p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 25.625em) {
+    .slogan_module .container h2 {
+        font-size: 1.7rem;
+    }
+
+    .slogan_module .container h1 {
+        font-size: 1.15rem;
+    }
+
+    .slogan_module .container p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 25.625em) {
+    .slogan_module .container p {
+        font-size: 0.6rem;
+        max-width: 30em;
+    }
+}
 
 /* About Section */
 
@@ -395,7 +451,7 @@ header .buttony {
 
 .about_module .biography .biography_text {
     white-space: pre-line;
-    max-width: 44ch;
+    max-width: 50ch;
     line-height: 30.6px;
     font-weight: 400;
     font-size: 1.125rem;
@@ -412,12 +468,12 @@ header .buttony {
 /* ! Skills */
 
 .about_module .skills {
-    margin-block-start: 310px;
+    margin-block-start: 130px;
 }
 
 .about_module .skills h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     padding-block-end: 50px;
 }
@@ -547,6 +603,10 @@ header .buttony {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.education_module .education_box .grad_cap {
+    margin-inline-end: 0.5em;
 }
 
 .education_module .education_box {
@@ -1044,6 +1104,13 @@ header .buttony {
     }
 }
 
+@media (max-width: 33.75em) {
+    .contact_module .column_template {
+        margin-inline: 1em;
+    }
+
+}
+
 /* Footer Section */
 
 footer {
@@ -1051,7 +1118,7 @@ footer {
 }
 
 footer i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fff;
 }
 
@@ -1132,5 +1199,28 @@ footer .copyright {
 
     footer .copyright {
         font-size: 0.6rem;
+    }
+}
+
+/* For small laptop */
+
+@media (min-width: 80em) {
+    .slogan_module .container h1 {
+        font-size: 1.7rem;
+    }
+    
+    .slogan_module .container h2 {
+        font-size: 4.7rem;
+    }
+
+    .slogan_module .container p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (min-width: 50em) {
+    .container {
+        padding-inline: 2em;
     }
 }
