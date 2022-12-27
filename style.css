@@ -164,7 +164,7 @@ header .buttony {
 
     header .primary_nav[data-visible] {
         display: block;
-        position: absolute;
+        position: absolute; 
     }
 
     header .buttony {
@@ -553,6 +553,18 @@ header .buttony {
     .about_module .biography .biography_text {
         text-align:justify;
     }
+}
+
+@media (max-width: 28.75em) {
+
+    .about_module .person_image {
+        max-width: 12em;
+        margin-inline: auto;
+    }
+
+    .about_module .biography_text {
+        font-size: 0.9rem !important;
+    }    
 }
 
 
@@ -1109,6 +1121,17 @@ header .buttony {
         margin-inline: 1em;
     }
 
+}
+
+@media (max-width: 28.75em) {
+    /* 0.9rem */
+    .contact_module .text_area p {
+        font-size: 0.9rem;
+    }
+
+    .contact_module .text_area h1 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Footer Section */
