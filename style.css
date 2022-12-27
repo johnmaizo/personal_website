@@ -736,6 +736,11 @@ header .buttony {
         position: relative;
         right: 25%;
     }
+
+    .education_module .education_box .custom_school {
+        width: 17em;
+        padding-inline-end: 12px;
+    } 
 }
 
 @media (max-width: 50em) {
