@@ -208,11 +208,17 @@ header .buttony {
     position: relative;
 }
 
+.slogan_module .container p {
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
 .slogan_module .container .line_left {
     width: 15%;
     float: left;
-    height: 0.4em;
+    height: 0.3em;
     background-color: #D9D9D9;
+    border: 0;
 }
 
 .slogan_module .container p {
@@ -225,8 +231,9 @@ header .buttony {
 .slogan_module .container .line_right {
     width: 15%;
     float: right;
-    height: 0.4em;
+    height: 0.3em;
     background-color: #D9D9D9;
+    border: 0;
 }
 
 .slogan_module .container .flex_wrapper {
@@ -1238,10 +1245,6 @@ footer .copyright {
     
     .slogan_module .container h2 {
         font-size: 4.7rem;
-    }
-
-    .slogan_module .container p {
-        font-size: 0.9rem;
     }
 
 }
