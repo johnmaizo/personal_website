@@ -958,6 +958,10 @@ header .buttony {
   display: none;
 }
 
+.work_module .show2 {
+  padding-block-end: 2em;
+}
+
 .work_module .box:is(:hover, :focus-within) > .show {
   display: block;
 }
