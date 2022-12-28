@@ -469,7 +469,7 @@ header .buttony {
 
 .person .person_image {
   border-radius: 50%;
-  padding-block-start: 2em;
+  margin-block-start: 2em;
 }
 
 .about_module .biography .biography_text {
