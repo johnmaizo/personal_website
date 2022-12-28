@@ -1,350 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Robert Maizo | Aspiring Front-End Web Developer</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="image/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="image/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <script src="script/main.js" defer></script>
 
     <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Martian+Mono&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css  ">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css  "
+    />
     <!-- Animation -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Canvas -->
     <script src="script/canvas.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="primary_header">
-        <div id="home" class="hero_expanded">
-            <canvas id="canv"></canvas>
+      <div id="home" class="hero_expanded">
+        <canvas id="canv"></canvas>
 
-            <div class="header_container">
-                <div class="container">
-                    <div class="nav_wrapper">
-                        <button class="buttony" aria-controls="primary-navigation" aria-expanded="false">
-                            <span class="fa-solid fa-bars hamburger" style="color: #fff;" aria-hidden="true"></span>
-                            <span class="fa-solid fa-x close" style="color: #fff;" aria-hidden="true"></span>
-                        </button>
+        <div class="header_container">
+          <div class="container">
+            <div class="nav_wrapper">
+              <button
+                class="buttony"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+              >
+                <span
+                  class="fa-solid fa-bars hamburger"
+                  style="color: #fff"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="fa-solid fa-x close"
+                  style="color: #fff"
+                  aria-hidden="true"
+                ></span>
+              </button>
 
-                        <nav class="primary_nav">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About Me</a></li>
-                                <li><a href="#education">Education</a></li>
-                                <li><a href="#works">Works</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </div>
+              <nav class="primary_nav">
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About Me</a></li>
+                  <li><a href="#education">Education</a></li>
+                  <li><a href="#works">Works</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
             </div>
-
-            <div class="slogan_module">
-                <div class="container">
-                    <div class="slogan_wrapper">
-                        <h1>Hello, I'm</h1>
-                        <div class="flex_wrapper">
-                            <hr class="line_left">
-                            <h2>JOHN ROBERT MAIZO</h2>
-                            <hr class="line_right">
-                        </div>
-                        <p>An Aspiring Front-End Web Developer / Software Engineer</p>
-
-                        <a href="#about"><img src="image/icons/mouse.png" alt=""></a>
-                    </div>
-                </div>
-            </div>   
+          </div>
         </div>
+
+        <div class="slogan_module">
+          <div class="container">
+            <div class="slogan_wrapper">
+              <h1>Hello, I'm</h1>
+              <div class="flex_wrapper">
+                <hr class="line_left" />
+                <h2>JOHN ROBERT MAIZO</h2>
+                <hr class="line_right" />
+              </div>
+              <p>An Aspiring Front-End Web Developer / Software Engineer</p>
+
+              <a href="#about"><img src="image/icons/mouse.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section id="about" class="about_module">
-             <div class="container">
-                <h1>ABOUT ME</h1>
-                <div class="grid_column">
-                    <div class="biography">
-                        <div class="person">
-                            <div class="person_container">
-                                <!-- <img src="image/gwapo_background.jpg" alt="" class="circle"> -->
-                                <img src="image/gwapo_full.jpg" alt="John Robert Maizo" class="person_image">
-                            </div>
-                        </div>
-
-                        <p class="biography_text">
-                            Hi there! My name is John Robert Maizo. I'm 20 years old and currently reside in Cebu, Philippines. I'm a second-year BSIT student pursuing a career as a front-end web developer or software engineer.
-
-                            I have always been fascinated by the power of technology to solve problems and make our lives easier. I decided to pursue my love of coding professionally through Web Development or Software Development. Even though I am still in the early stages of it, I am constantly learning and exploring new web technologies. I also enjoy doing problem-solving activities assigned to us by our instructor.
-
-                            I prefer watching cute cat videos and playing online games when I'm not writing code and learning new technologies. I also go cycling.
-                        </p>
-                    </div>
-
-                    <div class="skills">
-                        <h2>SKILLS</h2>
-                        <div class="flex_wrapper">
-                            <div class="box">
-                                <img src="image/skills/html.png" alt="HTML">
-                                <p class="box_html">HTML</p>
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/css.png" alt="CSS">
-                                <p class="box_css">CSS</p>
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/java.png" alt="Java">
-                                JAVA
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/javaScript.png" alt="Java Script">
-                                JAVA SCRIPT
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/c.png" alt="C">
-                                <p class="box_c">C</p>
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/visualstudio.png" alt="Visual Studio">
-                                VISUAL <br> STUDIO
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/photoshop.png" alt="Photoshop">
-                                <p>PHOTOSHOP</p> 
-                            </div>
-
-                            <div class="box">
-                                <img src="image/skills/figma.png" alt="Figma">
-                                FIGMA
-                            </div>
-                        </div>
-                    </div>
+      <section id="about" class="about_module">
+        <div class="container">
+          <h1>ABOUT ME</h1>
+          <div class="grid_column">
+            <div class="biography">
+              <div class="person">
+                <div class="person_container">
+                  <!-- <img src="image/gwapo_background.jpg" alt="" class="circle"> -->
+                  <img
+                    src="image/gwapo_full.jpg"
+                    alt="John Robert Maizo"
+                    class="person_image"
+                  />
                 </div>
-             </div>
-        </section>
+              </div>
 
-        <section id="education" class="education_module">
-            <div class="container">
-                <h1 class="educ_title">EDUCATION</h1>
-
-                <div class="linya_with_ball"></div>
-
-                <div class="row_template">
-
-                    
-
-                    <div class="animate__animated animate_right | push_right">
-                        <div class="education_box">
-                            <div class="grad_cap">
-                                <i class="fa-solid fa-graduation-cap grad_icon"></i>
-                            </div>
-                            
-                            <div id="text_area" class="text_area custom_width">
-                                <h1>College - BSIT</h1>
-                                <p class="school_text">Benedicto College</p>
-                                <p class="school_location custom_school">A.S. Fortuna Street, Mandaue City</p>
-                                <p class="school_date custom_width_date">2022 - Present</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate__animated animate_left | push_left">
-                        <div class="education_box">
-                            <div class="grad_cap">
-                                <i class="fa-solid fa-graduation-cap grad_icon"></i>
-                            </div>
-                            
-                            <div id="text_area" class="text_area">
-                                <h1>College - BSIT</h1>
-                                <p class="school_text">University of Cebu Lapu-Lapu and Mandaue</p>
-                                <p class="school_location">A.C. Cortes Avenue, Looc, Mandaue City</p>
-                                <p class="school_date">2021 - 2022</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate__animated animate_right | push_right">
-                        <div class="education_box">
-                            <div class="grad_cap">
-                                <i class="fa-solid fa-graduation-cap grad_icon"></i>
-                            </div>
-                            
-                            <div id="text_area" class="text_area">
-                                <h1>Senior High School Graduate</h1>
-                                <p class="school_text">University of Cebu Lapu-Lapu and Mandaue</p>
-                                <p class="school_location">A.C. Cortes Avenue, Looc, Mandaue City</p>
-                                <p class="school_date">2019 - 2021</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="animate__animated animate_left | push_left">
-                        <div class="education_box">
-                            <div class="grad_cap">
-                                <i class="fa-solid fa-graduation-cap grad_icon"></i>
-                            </div>
-                            
-                            <div id="text_area" class="text_area">
-                                <h1>Junior High School Graduate</h1>
-                                <p class="school_text">Tipolo National High School</p>
-                                <p class="school_location">C.D. Seno St.,Tipolo, Mandaue City</p>
-                                <p class="school_date date1">2015 - 2019</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-
-                </div>
+              <p class="biography_text">
+                Hi there! My name is John Robert Maizo. I'm 20 years old and
+                currently reside in Cebu, Philippines. I'm a second-year BSIT
+                student pursuing a career as a front-end web developer or
+                software engineer. I have always been fascinated by the power of
+                technology to solve problems and make our lives easier. I
+                decided to pursue my love of coding professionally through Web
+                Development or Software Development. Even though I am still in
+                the early stages of it, I am constantly learning and exploring
+                new web technologies. I also enjoy doing problem-solving
+                activities assigned to us by our instructor. I prefer watching
+                cute cat videos and playing online games when I'm not writing
+                code and learning new technologies. I also go cycling.
+              </p>
             </div>
-        </section>
 
-        <section id="works" class="work_module">
-            <div class="container">
-                <h1 class="head">MY WORKS</h1>
-
-                <h2 class="titles">Websites</h2>
-                <div class="flex_wrapper">
-                    <div class="box john_cycling">
-                        <div class="show show2">
-                            <h1>JOHNS Cycling Shop Website</h1>
-                            <p>Simple Shopping Website 
-                                with 
-                                HTML and CSS</p>
-                            <a href="https://nel-lim.github.io/john_maizo/" target="_blank" rel="noopener noreferrer">Visit Site</a>
-                        </div>
-                    </div>
-
-                    <div class="box coming_soon">
-
-                    </div>
+            <div class="skills">
+              <h2>SKILLS</h2>
+              <div class="flex_wrapper">
+                <div class="box">
+                  <img src="image/skills/html.png" alt="HTML" />
+                  <p class="box_html">HTML</p>
                 </div>
 
-                <hr class="line">
-
-                <h2 class="titles">Java Programs</h2>
-                <div class="flex_wrapper">
-                    <div class="box java1">
-                        <div class="show">
-                            <h1>Simple Array Program 1</h1>
-                            <p>Simple Array program that created in
-                                Java Language</p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
-
-                    <div class="box java2">
-                        <div class="show">
-                            <h1>Zodiac Sign Program</h1>
-                            <p>Zodiac Sign program that created in 
-                                Java Language</p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
-
-                    <div class="box java3">
-                        <div class="show">
-                            <h1>Simple Array Program 2</h1>
-                            <p>Simple Array program that created in
-                                Java Language </p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
+                <div class="box">
+                  <img src="image/skills/css.png" alt="CSS" />
+                  <p class="box_css">CSS</p>
                 </div>
 
-                <hr class="line">
-
-                <h2 class="titles">C Programs</h2>
-                <div class="flex_wrapper">
-                    <div class="box c1">
-                        <div class="show">
-                            <h1>Sari-Sari Store Program</h1>
-                            <p>Sari-sari store program that created in 
-                                C Language </p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
-
-                    <div class="box c2">
-                        <div class="show show2">
-                            <h1>Array Operation Program</h1>
-                            <p>Simple Array Operation program that
-                                created in C Language </p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
-
-                    <div class="box c3">
-                        <div class="show show2">
-                            <h1>Simple Arithmetic Program</h1>
-                            <p>Simple arithmetic program that
-                                 created in C Language </p>
-                            <a href="#">Download Source Code</a>
-                        </div>
-                    </div>
+                <div class="box">
+                  <img src="image/skills/java.png" alt="Java" />
+                  JAVA
                 </div>
 
+                <div class="box">
+                  <img src="image/skills/javaScript.png" alt="Java Script" />
+                  JAVA SCRIPT
+                </div>
+
+                <div class="box">
+                  <img src="image/skills/c.png" alt="C" />
+                  <p class="box_c">C</p>
+                </div>
+
+                <div class="box">
+                  <img
+                    src="image/skills/visualstudio.png"
+                    alt="Visual Studio"
+                  />
+                  VISUAL <br />
+                  STUDIO
+                </div>
+
+                <div class="box">
+                  <img src="image/skills/photoshop.png" alt="Photoshop" />
+                  <p>PHOTOSHOP</p>
+                </div>
+
+                <div class="box">
+                  <img src="image/skills/figma.png" alt="Figma" />
+                  FIGMA
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="contact_module">
-            <div class="container">
-                <h1 class="title">CONTACT</h1>
+      <section id="education" class="education_module">
+        <div class="container">
+          <h1 class="educ_title">EDUCATION</h1>
 
-                <div class="column_template">
-                    <div class="text_area">
-                        <h1>Get in touch</h1>
-                        <p>
-                            For any help or inquiries, Feel free to send me a message, and I’ll get back to you soon.
-                        </p>
-                    </div>
+          <div class="linya_with_ball"></div>
 
-                    <div class="fill_up_area">
-                        <form action="https://formspree.io/f/mayzwkbz" method="POST">
-                            <input type="text" id="name" class="text" name="Name" placeholder="Your name" required>
-                            <input type="email" id="email" class="text" name="Email" placeholder="Your email" required>
-                            <textarea id="message" class="text" name="Message" cols="50" rows="10" placeholder="Your message" required></textarea>
-                            <button class="button" type="submit">SUBMIT</button>
-                        </form>
-                    </div>
+          <div class="row_template">
+            <div class="animate__animated animate_right | push_right">
+              <div class="education_box">
+                <div class="grad_cap">
+                  <i class="fa-solid fa-graduation-cap grad_icon"></i>
                 </div>
+
+                <div id="text_area" class="text_area custom_width">
+                  <h1>College - BSIT</h1>
+                  <p class="school_text">Benedicto College</p>
+                  <p class="school_location custom_school">
+                    A.S. Fortuna Street, Mandaue City
+                  </p>
+                  <p class="school_date custom_width_date">2022 - Present</p>
+                </div>
+              </div>
             </div>
-        </section>
+
+            <div class="animate__animated animate_left | push_left">
+              <div class="education_box">
+                <div class="grad_cap">
+                  <i class="fa-solid fa-graduation-cap grad_icon"></i>
+                </div>
+
+                <div id="text_area" class="text_area">
+                  <h1>College - BSIT</h1>
+                  <p class="school_text">
+                    University of Cebu Lapu-Lapu and Mandaue
+                  </p>
+                  <p class="school_location">
+                    A.C. Cortes Avenue, Looc, Mandaue City
+                  </p>
+                  <p class="school_date">2021 - 2022</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate_right | push_right">
+              <div class="education_box">
+                <div class="grad_cap">
+                  <i class="fa-solid fa-graduation-cap grad_icon"></i>
+                </div>
+
+                <div id="text_area" class="text_area">
+                  <h1>Senior High School Graduate</h1>
+                  <p class="school_text">
+                    University of Cebu Lapu-Lapu and Mandaue
+                  </p>
+                  <p class="school_location">
+                    A.C. Cortes Avenue, Looc, Mandaue City
+                  </p>
+                  <p class="school_date">2019 - 2021</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate_left | push_left">
+              <div class="education_box">
+                <div class="grad_cap">
+                  <i class="fa-solid fa-graduation-cap grad_icon"></i>
+                </div>
+
+                <div id="text_area" class="text_area">
+                  <h1>Junior High School Graduate</h1>
+                  <p class="school_text">Tipolo National High School</p>
+                  <p class="school_location">
+                    C.D. Seno St.,Tipolo, Mandaue City
+                  </p>
+                  <p class="school_date date1">2015 - 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="work_module">
+        <div class="container">
+          <h1 class="head">MY WORKS</h1>
+
+          <h2 class="titles">Websites</h2>
+          <div class="flex_wrapper">
+            <div class="box john_cycling">
+              <div class="show show2">
+                <h1>JOHNS Cycling Shop Website</h1>
+                <p>Simple Shopping Website with HTML and CSS</p>
+                <a
+                  href="https://nel-lim.github.io/john_maizo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit Site</a
+                >
+              </div>
+            </div>
+
+            <div class="box coming_soon"></div>
+          </div>
+
+          <hr class="line" />
+
+          <h2 class="titles">Java Programs</h2>
+          <div class="flex_wrapper">
+            <div class="box java1">
+              <div class="show">
+                <h1>Simple Array Program 1</h1>
+                <p>Simple Array program that created in Java Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+
+            <div class="box java2">
+              <div class="show">
+                <h1>Zodiac Sign Program</h1>
+                <p>Zodiac Sign program that created in Java Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+
+            <div class="box java3">
+              <div class="show">
+                <h1>Simple Array Program 2</h1>
+                <p>Simple Array program that created in Java Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="line" />
+
+          <h2 class="titles">C Programs</h2>
+          <div class="flex_wrapper">
+            <div class="box c1">
+              <div class="show">
+                <h1>Sari-Sari Store Program</h1>
+                <p>Sari-sari store program that created in C Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+
+            <div class="box c2">
+              <div class="show show2">
+                <h1>Array Operation Program</h1>
+                <p>Simple Array Operation program that created in C Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+
+            <div class="box c3">
+              <div class="show show2">
+                <h1>Simple Arithmetic Program</h1>
+                <p>Simple arithmetic program that created in C Language</p>
+                <a href="#">Download Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact_module">
+        <div class="container">
+          <h1 class="title">CONTACT</h1>
+
+          <div class="column_template">
+            <div class="text_area">
+              <h1>Get in touch</h1>
+              <p>
+                For any help or inquiries, Feel free to send me a message, and
+                I’ll get back to you soon.
+              </p>
+            </div>
+
+            <div class="fill_up_area">
+              <form action="https://formspree.io/f/mayzwkbz" method="POST">
+                <input
+                  type="text"
+                  id="name"
+                  class="text"
+                  name="Name"
+                  placeholder="Your name"
+                  required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  class="text"
+                  name="Email"
+                  placeholder="Your email"
+                  required
+                />
+                <textarea
+                  id="message"
+                  class="text"
+                  name="Message"
+                  cols="50"
+                  rows="10"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+                <button class="button" type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <a href="#home" class="upp"><i class="fa-solid fa-angles-up up"></i></a>
+      <div class="container">
+        <a href="#home" class="upp"><i class="fa-solid fa-angles-up up"></i></a>
 
-            <div class="flex_wrapper">
-                <a href="https://www.linkedin.com/in/johnrobertmaizo/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in linked_in"></i></a>
-                <a href="https://facebook.com/john.hiro2" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f facebook"></i></a>
-                <a href="https://twitter.com/johnmaizo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://github.com/johnmaizo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-            </div>
-
-            <p class="copyright">Design and created by Me © 2022</p>
+        <div class="flex_wrapper">
+          <a
+            href="https://www.linkedin.com/in/johnrobertmaizo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-linkedin-in linked_in"></i
+          ></a>
+          <a
+            href="https://facebook.com/john.hiro2"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-facebook-f facebook"></i
+          ></a>
+          <a
+            href="https://twitter.com/johnmaizo"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://github.com/johnmaizo"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
+
+        <p class="copyright">Design and created by Me © 2022</p>
+      </div>
     </footer>
-
-    
-
-</body>
+  </body>
 </html>
