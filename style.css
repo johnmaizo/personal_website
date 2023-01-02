@@ -103,6 +103,10 @@ a {
     width: 120%;
   }
 
+  header nav ul li .active::before {
+    width: 120%;
+  }
+
   header .header_container {
     position: fixed;
     width: 100%;
