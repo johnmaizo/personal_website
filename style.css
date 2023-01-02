@@ -119,7 +119,7 @@ a {
     display: flex;
     gap: 100px;
     justify-content: center;
-    padding-block: 1.55em;
+    padding-block: 1.1em;
   }
 
   header nav ul li a {
