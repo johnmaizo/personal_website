@@ -125,3 +125,12 @@ function navHighlighter() {
     }
   });
 }
+
+// for loading screen
+$(window).load(function() {
+  // Animate loader off screen
+  $(".loading").fadeOut("slow");;
+});
+// Ends here
+
+
