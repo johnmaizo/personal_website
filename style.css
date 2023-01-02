@@ -113,6 +113,7 @@ a {
   /* For Scroll below */
   header .nav_scrolled {
     background-color: #243854fa;
+    box-shadow: 0 5px 5px #131e2efa;
   }
 
   header nav ul {
@@ -772,8 +773,9 @@ header .buttony {
   .education_module .linya_with_ball {
     background: #5aa2d7;
     position: absolute;
-    bottom: 177px;
     width: 3px;
+    top: 360px;
+    height: 741px;
   }
 
   .education_module .education_box {
@@ -836,8 +838,7 @@ header .buttony {
 
 @media (max-width: 33.125em) {
   .education_module .linya_with_ball {
-    top: 20em;
-    height: 60em;
+    height: 57.2em;
   }
 }
 
