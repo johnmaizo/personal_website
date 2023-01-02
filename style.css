@@ -110,7 +110,7 @@ a {
   header .header_container {
     position: fixed;
     width: 100%;
-    transition: 300ms ease-in-out;
+    transition: all 500ms;
     z-index: 1000;
   }
 
@@ -120,11 +120,50 @@ a {
     box-shadow: 0 5px 5px #131e2efa;
   }
 
+  /* ! With Logo when Scrolling */
+  header nav .Logo_nav, header nav .Logo_nav img {
+    display: block;
+    max-width: 45px;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    left: 30%;
+    transition: all 500ms;
+  }
+  
+  header nav .scrolled_nav {
+    display: none;
+    transition: all 500ms;
+    left: 30%;
+  }
+  
+  header nav .show {
+    display: block;
+    transition: all 500ms;
+    left: 0;
+  }
+  
+  header nav .hide {
+    display: none;
+    left: 30%;
+    transition: all 500ms;  
+  }
+  
+  header nav .change_direction {
+    gap: 2.7em;
+    justify-content: end;
+  
+    transition: all 500ms;
+  }
+  /* ! End here */
+
   header nav ul {
     display: flex;
     gap: 100px;
     justify-content: center;
     padding-block: 1.1em;
+
+    transition: all 500ms;
   }
 
   header nav ul li a {
@@ -133,6 +172,7 @@ a {
     font-weight: 600;
     position: relative;
     margin-inline: auto;
+    transition: all 500ms;
   }
 }
 
@@ -143,6 +183,11 @@ header .buttony {
 }
 
 @media (max-width: 50em) {
+  header nav .scrolled_nav {
+    display: none;
+    transition: all 500ms;
+  }
+
   header .primary_nav {
     display: none;
     position: fixed;
@@ -892,6 +937,7 @@ header .buttony {
   gap: 2em;
   margin-block-start: 2em;
   flex-wrap: wrap;
+  transition: all 500ms;  
 }
 
 .work_module .show {
@@ -899,6 +945,8 @@ header .buttony {
   font-weight: 600;
   padding-block-end: 2.35em;
   background-color: rgba(12, 12, 12, 0.949);
+
+  transition: all 500ms;
 }
 
 .work_module .show h1 {
@@ -926,6 +974,7 @@ header .buttony {
 .work_module .show a:is(:hover, :focus-within) {
   color: #55cb97;
   background-color: #fff;
+  transition: all 500ms;  
 }
 
 .work_module .john_cycling {
@@ -962,6 +1011,7 @@ header .buttony {
 
 .work_module .show {
   display: none;
+  transition: all 500ms;  
 }
 
 .work_module .show2 {
@@ -970,6 +1020,7 @@ header .buttony {
 
 .work_module .box:is(:hover, :focus-within) > .show {
   display: block;
+  transition: all 500ms;  
 }
 
 @media (min-width: 50em) {

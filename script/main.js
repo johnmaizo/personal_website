@@ -55,6 +55,10 @@ const header = document.querySelector(".here");
 const sectionOne = document.querySelector(".hero_expanded");
 const navHome = document.querySelector(".navHome");
 
+// hehey
+const scrolledNav = document.querySelector(".scrolled_nav");
+const changeDirect = document.querySelector(".change");
+
 const sectionOneOptions = {
   rootMargin: "-10px 0px 0px 0px"
 };
@@ -67,9 +71,19 @@ const sectionOneObserver = new IntersectionObserver(function (
     if (!entry.isIntersecting) {
       header.classList.add("nav_scrolled");
       navHome.classList.remove("active");
+
+      scrolledNav.classList.add("show");
+      scrolledNav.classList.remove("hide");
+
+      changeDirect.classList.add("change_direction");
     } else {
       header.classList.remove("nav_scrolled");
       navHome.classList.add("active");
+
+      scrolledNav.classList.remove("show");
+      scrolledNav.classList.add("hide");
+
+      changeDirect.classList.remove("change_direction");
     }
   });
 },
