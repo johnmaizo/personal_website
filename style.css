@@ -124,6 +124,7 @@ a {
     transform: translate(0, 50%);
     left: 30%;
     transition: all 500ms;
+    margin-inline-start: 1em;
   }
   
   header nav .scrolled_nav {
