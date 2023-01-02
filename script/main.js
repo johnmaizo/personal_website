@@ -21,7 +21,6 @@ const animateOut = "animate__" + Out;
 
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add(animateIn);
       entry.target.classList.remove(animateOut);
@@ -37,7 +36,6 @@ hiddenElements1.forEach((el) => observer1.observe(el));
 
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("animate__fadeInLeft");
       entry.target.classList.remove("animate__fadeOutLeft");
