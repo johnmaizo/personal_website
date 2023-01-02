@@ -110,8 +110,9 @@ a {
     z-index: 1000;
   }
 
-  header .header_container:is(:hover, :focus-within) {
-    background-color: #243854e4;
+  /* For Scroll below */
+  header .nav_scrolled {
+    background-color: #243854fa;
   }
 
   header nav ul {
