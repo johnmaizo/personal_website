@@ -54,7 +54,9 @@ hiddenElements2.forEach((el) => observer2.observe(el));
 const header = document.querySelector(".here");
 const sectionOne = document.querySelector(".hero_expanded");
 
-const sectionOneOptions = {};
+const sectionOneOptions = {
+  rootMargin: "-10px 0px 0px 0px"
+};
 
 const sectionOneObserver = new IntersectionObserver(function (
   entries,
