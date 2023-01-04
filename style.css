@@ -161,7 +161,7 @@ a {
     display: flex;
     gap: 100px;
     justify-content: center;
-    padding-block: 1em;
+    padding-block: 1.3em;
 
     transition: all 500ms;
   }
