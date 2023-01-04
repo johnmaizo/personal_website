@@ -11,22 +11,11 @@ navToggle.addEventListener("click", () => {
 
 // Animation below
 
-const In = "fadeInRight";
-const Out = "fadeOutRight";
-
-// Second animation
-
-const animateIn = "animate__" + In;
-const animateOut = "animate__" + Out;
-
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add(animateIn);
-      entry.target.classList.remove(animateOut);
-    } else {
-      entry.target.classList.remove(animateIn);
-      entry.target.classList.add(animateOut);
+      entry.target.classList.add("animate__fadeInRight");
+      entry.target.classList.remove("animate__fadeOutRight");
     }
   });
 });
@@ -39,10 +28,7 @@ const observer2 = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate__fadeInLeft");
       entry.target.classList.remove("animate__fadeOutLeft");
-    } else {
-      entry.target.classList.remove("animate__fadeInLeft");
-      entry.target.classList.add("animate__fadeOutLeft");
-    }
+    } 
   });
 });
 
@@ -60,7 +46,7 @@ const scrolledNav = document.querySelector(".scrolled_nav");
 const changeDirect = document.querySelector(".change");
 
 const sectionOneOptions = {
-  rootMargin: "-10px 0px 0px 0px"
+  rootMargin: "-90px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(function (
@@ -108,7 +94,7 @@ function navHighlighter() {
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 10;
+    const sectionTop = current.offsetTop - 90;
     sectionId = current.getAttribute("id");
     
     /*

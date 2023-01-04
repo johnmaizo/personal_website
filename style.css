@@ -111,8 +111,8 @@ a {
 
   /* For Scroll below */
   header .nav_scrolled {
-    background-color: #243854e6;
-    box-shadow: 0 5px 5px #131e2efa;
+    background-color: #243854;
+    box-shadow: 0 0px 5px #131e2efa;
   }
 
   /* ! With Logo when Scrolling */
@@ -146,9 +146,13 @@ a {
   }
   
   header nav .change_direction {
-    gap: 2.7em;
+    gap: 2em;
     justify-content: end;
-  
+    transition: all 500ms;
+  }
+
+  header nav .change_direction > li a {
+    text-transform: none;
     transition: all 500ms;
   }
   /* ! End here */
@@ -157,7 +161,7 @@ a {
     display: flex;
     gap: 100px;
     justify-content: center;
-    padding-block: 1.1em;
+    padding-block: 1em;
 
     transition: all 500ms;
   }
