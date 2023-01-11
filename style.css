@@ -116,7 +116,7 @@ a {
   }
 
   /* ! With Logo when Scrolling */
-  header nav .Logo_nav, header nav .Logo_nav img {
+  header nav .Logo_nav img {
     display: block;
     max-width: 45px;
     position: absolute;
@@ -125,6 +125,28 @@ a {
     left: 30%;
     transition: all 500ms;
     margin-inline-start: 1em;
+  }
+
+  header nav .Logo_nav {
+    display: block;
+    max-width: 10em;
+    position: absolute;
+    bottom: 50%;
+    
+    transform: translate(0, 50%);
+  } 
+
+  header nav .Logo_nav p {
+    position: relative;
+    font-family:monospace;
+    left: 7em;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  header nav .Logo_nav .name_under {
+    font-size: 0.8rem;
+    left: 8.8em;
   }
   
   header nav .scrolled_nav {
@@ -159,7 +181,7 @@ a {
 
   header nav ul {
     display: flex;
-    gap: 100px;
+    gap: 5em;
     justify-content: center;
     padding-block: 1.3em;
 
@@ -193,19 +215,27 @@ header .buttony {
     position: fixed;
     z-index: 10;
     background-color: #110736f7;
-    border-radius: 15px;
     text-align: center;
     right: 0;
     margin-top: 70px;
     overflow: hidden;
+    width: 100%;
+
   }
 
-  header .primary_nav ul {
-    display: block;
+  .aw {
+    height: 100vh;
+    display: grid;
+    align-items: center;
   }
+  
 
   header .primary_nav ul {
-    padding: 2em;
+    padding-inline: 2em;
+  }
+
+  header .primary_nav li {
+    border: solid 3px hotpink;
   }
 
   header .primary_nav li a {
@@ -215,7 +245,7 @@ header .buttony {
     position: relative;
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: center;
     transition: 250ms ease-in-out;
     line-height: 3em;
   }
@@ -257,13 +287,44 @@ header .buttony {
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
+  margin-block-start: 3em;
 }
 
-.slogan_module .container h2 {
-  font-size: 5rem;
-  font-weight: 700;
+/* ! Change here vv */
+.svg_text {
+  height: 6.25em;
+  /* max-width: 62em; */
+  /* width: 89em; */
+  width: 100%;
   position: relative;
 }
+
+.svg_text svg text {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 10px;
+  stroke: #ffa5d8;
+  font-size: 4.7rem;
+  font-weight: 700;
+  stroke-width: 3;
+  animation: textAnimate 5s infinite alternate;
+  text-align: center;
+}
+
+@keyframes textAnimate {
+  0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%)
+  }
+  
+  100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+ }
+}
+
+/* ! Ends here ^^ */
 
 .slogan_module .container p {
   font-size: 1.15rem;
@@ -276,13 +337,13 @@ header .buttony {
   height: 0.15em;
   background-color: #d9d9d9;
   border: 0;
+  margin-block-end: 1em;
 }
 
 .slogan_module .container p {
   font-size: 1.2rem;
   font-weight: 400;
   font-family: "Martian Mono", monospace;
-  padding-block-start: 0.5em;
 }
 
 .slogan_module .container .line_right {
@@ -291,6 +352,7 @@ header .buttony {
   height: 0.15em;
   background-color: #d9d9d9;
   border: 0;
+  margin-block-end: 1em;
 }
 
 .slogan_module .container .flex_wrapper {
@@ -298,7 +360,7 @@ header .buttony {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 1.25em;
+  /* gap: 1.25em; */
 }
 
 .slogan_module .container a {
@@ -324,27 +386,6 @@ header .buttony {
   .slogan_module .container h2 {
     font-size: 3.2rem;
     margin-block: 1rem;
-  }
-
-  .slogan_module .container h2::before {
-    content: "";
-    height: 1px;
-    background-color: #d9d9d9;
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  .slogan_module .container h2::after {
-    content: "";
-    height: 1px;
-    background-color: #d9d9d9;
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 0;
   }
 
   .slogan_module .container p {
@@ -439,6 +480,104 @@ header .buttony {
   }
 }
 
+/* SVG Of slogan */
+
+@media (max-width: 82.5em) {
+  .svg_text svg text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 73.125em) {
+  .svg_text svg text {
+    font-size: 3.7rem;
+  }
+
+  .slogan_module .container .line_left, .slogan_module .container .line_right{
+    margin-block-end: 0;
+    margin-block-start: 1em;
+  }
+}
+
+@media (max-width: 69.063em) {
+  .svg_text svg text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 59.688em) {
+  .slogan_module .container .line_left, .slogan_module .container .line_right {
+    width: 5%;
+  }
+}
+
+@media (max-width: 51em) {
+  .slogan_module .container .line_left, .slogan_module .container .line_right {
+    width: 4%;
+  }
+  .svg_text {
+    height: 3.3rem;
+  }
+}
+
+@media (max-width: 44.375em) {
+  .svg_text svg text {
+    font-size: 2.5rem;
+    stroke-width: 1;
+  }
+
+  .svg_text {
+    height: 3.25em;
+  }
+}
+
+@media (max-width: 39.063em) {
+  .svg_text svg text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 33.75em) {
+  .svg_text svg text {
+    font-size: 1.5rem;
+  }
+  .svg_text {
+    height: 2rem;
+  }
+
+  .slogan_module .container p {
+    margin-block-start: 5px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 28.75em) {
+  .svg_text svg text {
+    font-size: 2.2rem;
+    letter-spacing: 0;
+  }
+
+  .svg_text {
+    height: 3em;
+  }
+
+  .slogan_module .container p {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 25.625em) {
+    .svg_text svg text {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+
+    .svg_text {
+      height: 2em;
+    }
+
+}
+
 /* About Section */
 
 .about_module {
@@ -455,7 +594,7 @@ header .buttony {
   );
 }
 
-.about_module h1 {
+.about_module h2 {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
@@ -702,7 +841,7 @@ header .buttony {
   z-index: 1;
 }
 
-.education_module .education_box h1 {
+.education_module .education_box h3 {
   font-weight: 600;
   color: #5aa2d7;
   font-size: 1.75rem;
@@ -949,7 +1088,7 @@ header .buttony {
   transition: all 500ms;
 }
 
-.work_module .show h1 {
+.work_module .show h4 {
   padding-block-start: 1.5em;
   font-size: 1.25rem;
 }
@@ -1096,7 +1235,7 @@ header .buttony {
   right: 70%;
 }
 
-.contact_module .text_area h1 {
+.contact_module .text_area h3 {
   font-size: 1.875rem;
   font-weight: 700;
 }
