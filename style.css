@@ -138,15 +138,16 @@ a {
 
   header nav .Logo_nav p {
     position: relative;
-    font-family:monospace;
-    left: 7em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    left: 7.8em;
     color: #fff;
-    font-size: 1rem;
   }
 
   header nav .Logo_nav .name_under {
-    font-size: 0.8rem;
-    left: 8.8em;
+    font-size: 0.65rem;
+    left: 11em;
   }
   
   header nav .scrolled_nav {
