@@ -42,13 +42,6 @@ body {
 
 /* ! Start Here */
 
-/* 
-
-font-family: 'Open Sans', sans-serif;
-font-family: 'Rubik', sans-serif;
-
-*/
-
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -205,6 +198,10 @@ header .buttony {
   display: none;
 }
 
+header .invisible {
+  display: none;
+}
+
 @media (max-width: 50em) {
   header nav .scrolled_nav {
     display: none;
@@ -212,31 +209,33 @@ header .buttony {
   }
 
   header .primary_nav {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 10;
     background-color: #110736f7;
-    text-align: center;
+    top: -4.5em;
     right: 0;
     margin-top: 70px;
     overflow: hidden;
-    width: 100%;
-
-  }
-
-  .aw {
+    padding-inline-start: 3em;
     height: 100vh;
-    display: grid;
-    align-items: center;
-  }
-  
 
-  header .primary_nav ul {
-    padding-inline: 2em;
+    transform: translate(100%, 0);
+
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
-  header .primary_nav li {
-    border: solid 3px hotpink;
+  header .primary_nav[data-animate] {
+    /* right: 0;  */
+    transform: none;
+  }
+
+  header .Nav_fix {
+    padding-inline: 3em;
+    /* position: fixed; */
+    margin-block-start: 7em;
   }
 
   header .primary_nav li a {
@@ -246,19 +245,24 @@ header .buttony {
     position: relative;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: end;
     transition: 250ms ease-in-out;
     line-height: 3em;
   }
 
   header .primary_nav li a:is(:hover, :focus) {
-    background-color: rgba(164, 164, 164, 0.647);
+    /* background-color: rgba(164, 164, 164, 0.647); */
+    color: rgba(164, 164, 164, 0.647);
   }
 
-  header .primary_nav[data-visible] {
-    display: block;
-    position: absolute;
-  }
+
+  /* header .primary_nav[data-visible]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.508), rgba(255, 255, 255, 0.64));
+    z-index: -123123;
+  } */
 
   header .buttony {
     display: block;
@@ -268,13 +272,39 @@ header .buttony {
     padding: 0.5em;
     right: 0;
     position: absolute;
-    top: 0;
+    top: 1.2em;
     font-size: 2rem;
-    z-index: 1;
+    
+    z-index: 10000;
+
+    -webkit-touch-callout: none;
   }
 
-  header .buttony .close {
-    display: none;
+  header .invisible {
+    position: absolute;
+    display: block;
+    border: 0;
+    opacity: 0;
+    background-color: rgba(14, 9, 29, 0);
+
+    transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  header .invisible[data-hide] {
+    width: 120%;
+    left: -3em;
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(14, 9, 29, 0.718);
+    border: 0;
+    opacity: 1;
+    z-index: 5;
+
+  }
+
+  header .buttony[data-fixed] {
+    position: fixed;
+    /* top: 1.2em; */
   }
 }
 
@@ -288,7 +318,7 @@ header .buttony {
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
-  margin-block-start: 3em;
+  /* margin-block-start: 3em; */
 }
 
 /* ! Change here vv */
@@ -354,6 +384,9 @@ header .buttony {
   background-color: #d9d9d9;
   border: 0;
   margin-block-end: 1em;
+
+  position: relative;
+  left: 0.6em;
 }
 
 .slogan_module .container .flex_wrapper {
@@ -364,13 +397,13 @@ header .buttony {
   /* gap: 1.25em; */
 }
 
-.slogan_module .container a {
-  width: 25px;
-  height: 40px;
+.slogan_module .mousey {
   display: block;
   margin-inline: auto;
-  margin-block-start: 150px;
+  position: relative;
+  top: 11em;
 }
+
 
 .slogan_module .slogan_wrapper {
   display: flex;
@@ -378,6 +411,28 @@ header .buttony {
   height: 100vh;
   justify-content: center;
 }
+
+/* ! SCROLL ANIMATION MOUSE SVG */
+/* circle {
+  animation: scroll 1.5s ease infinite;
+}
+
+@keyframes scroll {
+  0% { 
+    opacity: 0;
+    cy: 481;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+    cy: 231;
+  }
+} */
+
+
+
 
 @media (max-width: 50em) {
   .slogan_module .container h1 {
@@ -506,6 +561,12 @@ header .buttony {
   }
 }
 
+@media (max-width: 64.063em) {
+  .svg_text svg text {
+    font-size: 3.25rem;
+  }
+}
+
 @media (max-width: 59.688em) {
   .slogan_module .container .line_left, .slogan_module .container .line_right {
     width: 5%;
@@ -567,9 +628,15 @@ header .buttony {
   }
 }
 
+@media (max-width: 26.625em) {
+  .slogan_module .container p {
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-width: 25.625em) {
     .svg_text svg text {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       letter-spacing: 0;
     }
 
@@ -579,13 +646,42 @@ header .buttony {
 
 }
 
+@media (max-width: 23.5em) {
+  .svg_text svg text {
+    font-size: 2.02rem;
+    letter-spacing: 0;
+  }
+
+  .svg_text {
+    height: 3em;
+  }
+
+  .slogan_module .container p {
+    font-size: 0.77rem;
+  }
+
+}
+
+@media (max-width: 20.063em) {
+  .svg_text svg text {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+  }
+
+  .svg_text {
+    height: 2.3em;
+  }
+
+  .slogan_module .container p {
+    font-size: 0.67rem;
+  }
+}
+
 /* About Section */
 
 .about_module {
   padding-block: 100px;
 
-  /* background: rgb(2,0,36);
-    background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(83,94,142,1) 100%); */
   background: rgb(19, 30, 44);
   background: linear-gradient(
     180deg,
@@ -787,6 +883,7 @@ header .buttony {
   padding-block: 100px;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .education_module::before {
@@ -809,6 +906,7 @@ header .buttony {
   background-color: rgba(97, 154, 217, 0.1);
   top: 50%;
   right: 75%;
+  z-index: -1;
 }
 
 .education_module .educ_title {

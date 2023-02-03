@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/loader.css"> 
+
+    
+    <link rel="stylesheet" href="css/hamburger.css">
+
+    <link rel="stylesheet" href="css/mouseAnimation.css">
+
     <link rel="shortcut icon" href="image/favicon/favicon-black.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <link rel="shortcut icon" href="image/favicon/favicon-white.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
 
@@ -59,22 +65,19 @@
                 aria-controls="primary-navigation"
                 aria-expanded="false"
               >
-                <span
-                  class="fa-solid fa-bars hamburger"
-                  style="color: #fff"
-                  aria-hidden="true"
-                ></span>
-                <span
-                  class="fa-solid fa-x close"
-                  style="color: #fff"
-                  aria-hidden="true"
-                ></span>
+                <div class="hamburger_wrapper">
+                  <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
               </button>
 
               <nav class="primary_nav navigation">
                 <a href="index.html" class="Logo_nav scrolled_nav"><img src="image/logo_transparent.png" alt="Logo"> <p>JOHN ROBERT MAIZO</p> <p class="name_under">Front-End Developer</p></a>
 
-                <div class="aw">
+                <div class="Nav_fix">
                   <ul class="change | ">
                     <li><a href="#home" class="navHome | ">Home</a></li>
                     <li><a href="#about">About Me</a></li>
@@ -85,6 +88,7 @@
                 </div>
                 
               </nav>
+              <button class="invisible"></button>
             </div>
           </div>
         </div>
@@ -95,7 +99,6 @@
               <h1>Hello, I'm</h1>
               <div class="flex_wrapper">
                 <hr class="line_left" />
-                <!-- <h2>JOHN ROBERT MAIZO</h2> -->
                 <div class="svg_text">
                   <svg width="100%" height="100%">
                       <text x="51%" y="75%"  text-anchor="middle">
@@ -106,8 +109,25 @@
                 <hr class="line_right" />
               </div>
               <p>An Aspiring Front-End Web Developer / Software Engineer</p>
+              <div class="mousey">
+                <a href="#about">
+                  <div class='mouse-wrapper'>
+                    <div class="mouse-icon"></div>
+                    <div class="mouse-arrow"></div>
+                  </div>
 
-              <a href="#about"><img src="image/icons/mouse.png" alt="" /></a>
+                  <div id="touch-tooltip">
+                    <div id="drag-gesture">
+                      <div id="hand-icon"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="touchhey">
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -122,7 +142,6 @@
             <div class="biography">
               <div class="person">
                 <div class="person_container">
-                  <!-- <img src="image/gwapo_background.jpg" alt="" class="circle"> -->
                   <img
                     src="image/gwapo_full.jpg"
                     alt="John Robert Maizo"

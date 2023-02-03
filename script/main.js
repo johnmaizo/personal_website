@@ -1,12 +1,34 @@
 const primaryHeader = document.querySelector(".primary_header");
 const navToggle = document.querySelector(".buttony");
 const primaryNav = document.querySelector(".primary_nav");
+const hamburger = document.querySelector(".hamburger");
 
 navToggle.addEventListener("click", () => {
   primaryNav.hasAttribute("data-visible")
     ? navToggle.setAttribute("aria-expanded", true)
     : navToggle.setAttribute("aria-expanded", false);
   primaryNav.toggleAttribute("data-visible");
+  hamburger.toggleAttribute("data-hamburger");
+  primaryNav.toggleAttribute("data-animate");
+  
+  inviButton.toggleAttribute("data-hide");
+  navToggle.toggleAttribute("data-fixed");
+});
+
+const inviButton = document.querySelector(".invisible");
+
+inviButton.addEventListener("click", () => {
+  if (primaryNav.hasAttribute("data-animate")) {
+
+
+    primaryNav.toggleAttribute("data-animate");
+    
+    hamburger.toggleAttribute("data-hamburger");
+
+    inviButton.toggleAttribute("data-hide");
+    navToggle.toggleAttribute("data-fixed");
+  }
+  
 });
 
 // Animation below
@@ -46,7 +68,7 @@ const scrolledNav = document.querySelector(".scrolled_nav");
 const changeDirect = document.querySelector(".change");
 
 const sectionOneOptions = {
-  rootMargin: "-90px 0px 0px 0px"
+  rootMargin: "-400px 0px 0px 0px" // ! CHANGE HERE
 };
 
 const sectionOneObserver = new IntersectionObserver(function (
@@ -94,7 +116,7 @@ function navHighlighter() {
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 90;
+    const sectionTop = current.offsetTop - 400; //! SAME SA ROOT MARGIN!!!!!!!!!!!
     sectionId = current.getAttribute("id");
     
     /*
