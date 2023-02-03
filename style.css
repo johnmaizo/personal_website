@@ -1193,13 +1193,38 @@ header .invisible {
   transition: all 500ms;  
 }
 
-.work_module .john_cycling {
-  background: url("image/works/johncyclingshop.jpg") no-repeat top / cover;
-}
+/* ! Coming Soon */
 
 .work_module .coming_soon {
   background: url("image/works/coming_soon.jpg") no-repeat top / cover;
 }
+
+/* ! ends here ^^ */
+
+.work_module .john_cycling {
+  background: url("image/works/johncyclingshop.jpg") no-repeat top / cover;
+}
+
+.work_module .clipboard {
+  background: url("image/works/Clipboard-Landing.jpg") no-repeat top / cover;
+}
+
+.work_module .news_homepage {
+  background: url("image/works/news_homepage.jpg") no-repeat top / cover;  
+}
+
+.work_module .clipboard .show {
+  position: relative;
+}
+
+.work_module .clipboard .show p {
+  padding-block: 2.2em;
+}
+
+.work_module .news_homepage .show p {
+  padding-block: 2.88em;
+}
+
 
 .work_module .java1 {
   background: url("image/works/java1.jpg") no-repeat top / cover;
