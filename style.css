@@ -1292,7 +1292,31 @@ header .invisible {
     padding-block: 1.5em;
   }
 
+  .work_module .show2 h4 {
+    padding-block-start: 1em;
+  }
+
   .work_module .show2 p {
+    padding-block: 0;
+  }
+
+  .work_module .clipboard .show p, .work_module .clipboard .show h4 {
+    padding-block: 0;
+  }
+
+  .work_module .clipboard .show p {
+    padding-block-end: 0.2em;
+  }
+
+  .work_module .news_homepage .show p, .work_module .news_homepage .show h4 {
+    padding-block: 0;
+  }
+
+  .work_module .news_homepage .show h4 {
+    padding-block-start: 1.2em;
+  }
+
+  .work_module .c3 .show2 p {
     padding-block: 0.7em;
   }
 }
