@@ -737,7 +737,8 @@ header .invisible {
 /* ! Delete below if you want */
 
 .person .person_image {
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-radius: 25%;
   margin-block-start: 2em;
   max-width: 13em;
 }
@@ -1169,7 +1170,7 @@ header .invisible {
   text-align: center;
   font-weight: 600;
   padding-block-end: 2.35em;
-  background-color: rgba(12, 12, 12, 0.851);
+  background-color: rgba(10, 11, 16, 0.874);
 
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
@@ -1269,9 +1270,7 @@ header .invisible {
 }
 
 .work_module .show {
-  opacity: 0; /* ! aw */
-
-  transform: translateY(-3em);
+  opacity: 0;
 
   width: 21.875em;
   height: 18.125em;
@@ -1282,12 +1281,26 @@ header .invisible {
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
+.work_module .parent_box .show .animate_up {
+  transform: translateY(-4em);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.work_module .parent_box .show .animate_down {
+  transform: translateY(4em);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
 .work_module .parent_box:is(:hover, :focus) > .box {
   transform: scale(1.11);
 }
 
 .work_module .parent_box:is(:hover, :focus) > .show {
   opacity: 1;
+}
+
+.work_module .parent_box:is(:hover, :focus) > .show .animate_up,
+.work_module .parent_box:is(:hover, :focus) > .show .animate_down {
   transform: none;
 }
 
@@ -1359,11 +1372,6 @@ header .invisible {
     padding-block: 0.7em;
   }
 
-  .work_module .parent_box .show {
-    transform: none;
-  }
-
-  
 }
 
 /* Contact Section */
