@@ -739,6 +739,7 @@ header .invisible {
 .person .person_image {
   border-radius: 50%;
   margin-block-start: 2em;
+  max-width: 13em;
 }
 
 .about_module .biography .biography_text {
