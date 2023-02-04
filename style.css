@@ -125,13 +125,13 @@ a {
     max-width: 10em;
     position: absolute;
     bottom: 50%;
-    
+
     transform: translate(0, 50%);
-  } 
+  }
 
   header nav .Logo_nav p {
     position: relative;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 0.9rem;
     font-weight: 500;
     left: 7.8em;
@@ -142,25 +142,25 @@ a {
     font-size: 0.65rem;
     left: 11em;
   }
-  
+
   header nav .scrolled_nav {
     display: none;
     transition: all 500ms;
     left: 30%;
   }
-  
+
   header nav .show {
     display: block;
     transition: all 500ms;
     left: 0;
   }
-  
+
   header nav .hide {
     display: none;
     left: 30%;
-    transition: all 500ms;  
+    transition: all 500ms;
   }
-  
+
   header nav .change_direction {
     gap: 2em;
     justify-content: end;
@@ -199,7 +199,12 @@ header .buttony {
 }
 
 header .invisible {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  border: 0;
+
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 @media (max-width: 50em) {
@@ -211,30 +216,32 @@ header .invisible {
   header .primary_nav {
     display: block;
     position: fixed;
-    z-index: 10;
-    background-color: #110736f7;
     top: -4.5em;
     right: 0;
+    z-index: 10;
     margin-top: 70px;
+
     overflow: hidden;
+
     padding-inline-start: 3em;
-    height: 100vh;
+
+    height: 101vh;
 
     transform: translate(100%, 0);
+    background-color: #211c32f7;
 
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   header .primary_nav[data-animate] {
-    /* right: 0;  */
     transform: none;
   }
 
   header .Nav_fix {
     padding-inline: 3em;
-    /* position: fixed; */
     margin-block-start: 7em;
   }
 
@@ -255,15 +262,6 @@ header .invisible {
     color: rgba(164, 164, 164, 0.647);
   }
 
-
-  /* header .primary_nav[data-visible]::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.508), rgba(255, 255, 255, 0.64));
-    z-index: -123123;
-  } */
-
   header .buttony {
     display: block;
     cursor: pointer;
@@ -271,40 +269,42 @@ header .invisible {
     border: 0;
     padding: 0.5em;
     right: 0;
-    position: absolute;
+    /* position: absolute; */
+
+    position: fixed;
     top: 1.2em;
     font-size: 2rem;
-    
+
     z-index: 10000;
 
     -webkit-touch-callout: none;
+
+    transition: 200ms ease;
   }
 
   header .invisible {
-    position: absolute;
-    display: block;
-    border: 0;
-    opacity: 0;
-    background-color: transparent;
-
-    transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-
-  header .invisible[data-hide] {
     width: 120%;
     left: -3em;
     position: fixed;
-    height: 100vh;
-    background-color: rgba(8, 6, 17, 0.333);
-    border: 0;
-    opacity: 1;
+    height: 101vh;
+
+    display: block;
     z-index: 5;
 
+    background-color: rgba(2, 2, 4, 0.36);
+  }
+
+  header .buttony[data-transparency="false"] {
+    opacity: 0.1;
+  }
+
+  header .invisible[data-hide] {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   header .buttony[data-fixed] {
     position: fixed;
-    /* top: 1.2em; */
   }
 }
 
@@ -343,16 +343,16 @@ header .invisible {
 
 @keyframes textAnimate {
   0% {
-      stroke-dasharray: 0 50%;
-      stroke-dashoffset:  20%;
-      fill:hsl(189, 68%, 75%)
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%);
   }
-  
+
   100% {
-      stroke-dasharray: 50% 0;
-      stroke-dashoffstet: -20%;
-      fill: hsla(189, 68%, 75%,0%)
- }
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%, 0%);
+  }
 }
 
 /* ! Ends here ^^ */
@@ -403,7 +403,6 @@ header .invisible {
   position: relative;
   top: 11em;
 }
-
 
 .slogan_module .slogan_wrapper {
   display: flex;
@@ -527,7 +526,8 @@ header .invisible {
     font-size: 3.7rem;
   }
 
-  .slogan_module .container .line_left, .slogan_module .container .line_right{
+  .slogan_module .container .line_left,
+  .slogan_module .container .line_right {
     margin-block-end: 0;
     margin-block-start: 1em;
   }
@@ -546,13 +546,15 @@ header .invisible {
 }
 
 @media (max-width: 59.688em) {
-  .slogan_module .container .line_left, .slogan_module .container .line_right {
+  .slogan_module .container .line_left,
+  .slogan_module .container .line_right {
     width: 5%;
   }
 }
 
 @media (max-width: 51em) {
-  .slogan_module .container .line_left, .slogan_module .container .line_right {
+  .slogan_module .container .line_left,
+  .slogan_module .container .line_right {
     width: 4%;
   }
   .svg_text {
@@ -607,26 +609,29 @@ header .invisible {
 }
 
 @media (max-width: 26.625em) {
+  .svg_text svg text {
+    font-size: 2.38rem;
+  }
+
   .slogan_module .container p {
     font-size: 0.7rem;
   }
 }
 
 @media (max-width: 25.625em) {
-    .svg_text svg text {
-      font-size: 1.7rem;
-      letter-spacing: 0;
-    }
+  .svg_text svg text {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+  }
 
-    .svg_text {
-      height: 2em;
-    }
-
+  .svg_text {
+    height: 2em;
+  }
 }
 
 @media (max-width: 23.5em) {
   .svg_text svg text {
-    font-size: 2.02rem;
+    font-size: 2rem;
     letter-spacing: 0;
   }
 
@@ -637,7 +642,6 @@ header .invisible {
   .slogan_module .container p {
     font-size: 0.77rem;
   }
-
 }
 
 @media (max-width: 20.063em) {
@@ -1103,7 +1107,7 @@ header .invisible {
 
 @media (max-width: 33.125em) {
   .education_module .linya_with_ball {
-    height: 57.2em;
+    height: 57.5em;
   }
 }
 
@@ -1145,6 +1149,10 @@ header .invisible {
 .work_module .box {
   width: 21.875em;
   height: 18.125em;
+
+  /* ! BRuh */
+  /* transform: none; */
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .work_module .flex_wrapper {
@@ -1153,16 +1161,16 @@ header .invisible {
   gap: 2em;
   margin-block-start: 2em;
   flex-wrap: wrap;
-  transition: all 500ms;  
+  transition: all 500ms;
 }
 
 .work_module .show {
   text-align: center;
   font-weight: 600;
   padding-block-end: 2.35em;
-  background-color: rgba(12, 12, 12, 0.949);
+  background-color: rgba(12, 12, 12, 0.851);
 
-  transition: all 500ms;
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .work_module .show h4 {
@@ -1173,6 +1181,7 @@ header .invisible {
 .work_module .show p {
   white-space: pre-line;
   padding-block: 3.5em;
+  font-weight: 400;
 }
 
 .work_module .show a {
@@ -1190,7 +1199,7 @@ header .invisible {
 .work_module .show a:is(:hover, :focus-within) {
   color: #55cb97;
   background-color: #fff;
-  transition: all 500ms;  
+  transition: all 500ms;
 }
 
 /* ! Coming Soon */
@@ -1210,21 +1219,16 @@ header .invisible {
 }
 
 .work_module .news_homepage {
-  background: url("image/works/news_homepage.jpg") no-repeat top / cover;  
+  background: url("image/works/news_homepage.jpg") no-repeat top / cover;
 }
 
-.work_module .clipboard .show {
-  position: relative;
+.work_module .clipboard_parent .show p {
+  padding-block: 3em;
 }
 
-.work_module .clipboard .show p {
-  padding-block: 2.2em;
-}
-
-.work_module .news_homepage .show p {
+.work_module .news_parent .show p {
   padding-block: 2.88em;
 }
-
 
 .work_module .java1 {
   background: url("image/works/java1.jpg") no-repeat top / cover;
@@ -1250,18 +1254,40 @@ header .invisible {
   background: url("image/works/c3.jpg") no-repeat top / cover;
 }
 
-.work_module .show {
-  display: none;
-  transition: all 500ms;  
-}
-
 .work_module .show2 {
   padding-block-end: 2em;
 }
 
-.work_module .box:is(:hover, :focus-within) > .show {
-  display: block;
-  transition: all 500ms;  
+/* ! AMBOT LANG */
+.work_module .parent_box {
+  position: relative;
+  width: 21.875em;
+  height: 18.125em;
+
+  overflow: hidden;
+}
+
+.work_module .show {
+  opacity: 0; /* ! aw */
+
+  transform: translateY(-3em);
+
+  width: 21.875em;
+  height: 18.125em;
+
+  position: absolute;
+  top: 0;
+
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.work_module .parent_box:is(:hover, :focus) > .box {
+  transform: scale(1.11);
+}
+
+.work_module .parent_box:is(:hover, :focus) > .show {
+  opacity: 1;
+  transform: none;
 }
 
 @media (min-width: 50em) {
@@ -1271,25 +1297,27 @@ header .invisible {
 }
 
 @media (max-width: 50em) {
+  .work_module .titles {
+    text-align: center;
+  }
+
+  .work_module .parent_box {
+    width: 16.875em;
+    height: 13.125em;
+  }
+
   .work_module .box {
     width: 16.875em;
     height: 13.125em;
   }
 
   .work_module .show {
+    width: 16.875em;
+    height: 13.125em;
+  }
+
+  .work_module .show {
     padding: 1em;
-  }
-
-  .work_module .titles {
-    text-align: center;
-  }
-
-  .work_module .show h1 {
-    padding-block-start: 0;
-  }
-
-  .work_module .show p {
-    padding-block: 1.5em;
   }
 
   .work_module .show2 h4 {
@@ -1300,25 +1328,41 @@ header .invisible {
     padding-block: 0;
   }
 
-  .work_module .clipboard .show p, .work_module .clipboard .show h4 {
+  .work_module .java1_parent .show p,
+  .work_module .java2_parent .show p,
+  .work_module .java3_parent .show p,
+  .work_module .c1_parent .show p,
+  .work_module .c3_parent .show p {
+    padding-block: 1em;
+  }
+
+  .work_module .clipboard_parent .show p,
+  .work_module .clipboard_parent .show h4 {
     padding-block: 0;
   }
 
-  .work_module .clipboard .show p {
+  .work_module .clipboard_parent .show p {
     padding-block-end: 0.2em;
   }
 
-  .work_module .news_homepage .show p, .work_module .news_homepage .show h4 {
+  .work_module .news_parent .show p,
+  .work_module .news_parent .show h4 {
     padding-block: 0;
   }
 
-  .work_module .news_homepage .show h4 {
+  .work_module .news_parent .show h4 {
     padding-block-start: 1.2em;
   }
 
   .work_module .c3 .show2 p {
     padding-block: 0.7em;
   }
+
+  .work_module .parent_box .show {
+    transform: none;
+  }
+
+  
 }
 
 /* Contact Section */
@@ -1440,10 +1484,6 @@ header .invisible {
     margin-block-end: 0;
   }
 
-  .contact_module .text_area h1 {
-    font-size: 2rem;
-  }
-
   .contact_module .column_template {
     grid-template-columns: none;
     gap: 2.5em;
@@ -1476,10 +1516,6 @@ header .invisible {
   /* 0.9rem */
   .contact_module .text_area p {
     font-size: 0.9rem;
-  }
-
-  .contact_module .text_area h1 {
-    font-size: 1.8rem;
   }
 }
 

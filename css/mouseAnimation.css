@@ -69,7 +69,7 @@
     -webkit-animation-direction: alternate;
   }
   
-  @-webkit-keyframes mouse-wheel {
+  /* @-webkit-keyframes mouse-wheel {
     0% {
       opacity: 1;
       -webkit-transform: translateY(0);
@@ -82,7 +82,7 @@
       -ms-transform: translateY(6px);
       transform: translateY(6px);
     }
-  }
+  } */
   
   @-webkit-keyframes mouse-scroll {
     0% {

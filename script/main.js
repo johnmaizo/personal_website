@@ -13,6 +13,7 @@ navToggle.addEventListener("click", () => {
   
   inviButton.toggleAttribute("data-hide");
   navToggle.toggleAttribute("data-fixed");
+  navToggle.toggleAttribute("data-show");
 });
 
 const inviButton = document.querySelector(".invisible");
@@ -27,6 +28,7 @@ inviButton.addEventListener("click", () => {
 
     inviButton.toggleAttribute("data-hide");
     navToggle.toggleAttribute("data-fixed");
+    navToggle.toggleAttribute("data-show");
   }
   
 });
@@ -68,7 +70,7 @@ const scrolledNav = document.querySelector(".scrolled_nav");
 const changeDirect = document.querySelector(".change");
 
 const sectionOneOptions = {
-  rootMargin: "-400px 0px 0px 0px" // ! CHANGE HERE
+  rootMargin: "-430px 0px 0px 0px" // ! CHANGE HERE
 };
 
 const sectionOneObserver = new IntersectionObserver(function (
@@ -116,7 +118,7 @@ function navHighlighter() {
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 400; //! SAME SA ROOT MARGIN!!!!!!!!!!!
+    const sectionTop = current.offsetTop - 430; //! SAME SA ROOT MARGIN!!!!!!!!!!!
     sectionId = current.getAttribute("id");
     
     /*
@@ -133,6 +135,21 @@ function navHighlighter() {
     }
   });
 }
+
+
+// ! Mobile When Scrolling 
+let timeoutId;
+
+window.addEventListener("scroll", () => {
+  if (!navToggle.hasAttribute("data-show")) {
+    clearTimeout(timeoutId);
+    navToggle.setAttribute("data-transparency", false);
+  
+    timeoutId = setTimeout(function() {
+      navToggle.setAttribute("data-transparency", true);
+    }, 200);
+  }
+});
 
 // ! for loading screen
 $(window).load(function() {
