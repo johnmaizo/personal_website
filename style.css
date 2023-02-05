@@ -35,9 +35,9 @@ html {
   height: 100vh;
 }
 
-html,
 body {
   overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 /* ! Start Here */
@@ -196,6 +196,8 @@ a {
 
 header .buttony {
   display: none;
+
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 header .invisible {
@@ -390,7 +392,7 @@ header .invisible {
 }
 
 .slogan_module .container .flex_wrapper {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -1152,18 +1154,23 @@ header .invisible {
   width: 21.875em;
   height: 18.125em;
 
-  /* ! BRuh */
-  /* transform: none; */
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .work_module .flex_wrapper {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  /* gap: 2em; */
+  gap: 0.2em;
   margin-block-start: 2em;
   flex-wrap: wrap;
   transition: all 500ms;
+}
+
+@media (max-width: 50em) {
+  .work_module .flex_wrapper {
+    gap: 1.5em;
+  }
 }
 
 .work_module .show {
@@ -1522,7 +1529,6 @@ header .invisible {
 }
 
 @media (max-width: 28.75em) {
-  /* 0.9rem */
   .contact_module .text_area p {
     font-size: 0.9rem;
   }
@@ -1634,5 +1640,73 @@ footer .copyright {
 @media (min-width: 50em) {
   .container {
     padding-inline: 2em;
+  }
+}
+
+/* ! Animation */
+
+.slogan_wrapper .hello {
+  opacity: 0;
+
+  justify-content: center;
+  gap: 0.25em;
+}
+
+.slogan_wrapper .iAm {
+  opacity: 0;
+}
+
+.slogan_wrapper .namey {
+  display: flex;
+  opacity: 0;
+}
+
+.slogan_wrapper .slogan {
+  opacity: 0;
+}
+
+.slogan_wrapper .show {
+  display: block;
+  opacity: 1;
+}
+
+.slogan_wrapper .showy {
+  display: flex;
+  opacity: 1;
+}
+
+/* ? Mouse and Hand | Nav */
+@media (min-width: 50em) {
+  header .primary_nav {
+    opacity: 0;
+    transform: translateY(-5em);
+    transition: all 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  header .primary_nav-animate {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+.slogan_wrapper .mousey {
+  opacity: 0;
+  transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events: none;
+}
+
+.slogan_wrapper .mousey_orig {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 50em) {
+  header .nav_wrapper .buttony {
+    transform: translateX(5em);
+  }
+
+  header .nav_wrapper .buttony_move {
+    transform: none;
   }
 }

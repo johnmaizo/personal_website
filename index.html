@@ -46,6 +46,8 @@
     <!-- LOADING -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- Loading fun stuff -->
@@ -97,8 +99,8 @@
         <div class="slogan_module">
           <div class="container">
             <div class="slogan_wrapper">
-              <h1>Hello, I'm</h1>
-              <div class="flex_wrapper">
+              <h1 class="hello animate__animated">Hello, <span class="iAm animate__animated">I'm</span></h1>
+              <div class="namey flex_wrapper animate__animated">
                 <hr class="line_left" />
                 <div class="svg_text">
                   <svg width="100%" height="100%">
@@ -106,10 +108,10 @@
                           JOHN ROBERT MAIZO
                       </text>
                   </svg>
-              </div>
+                </div>
                 <hr class="line_right" />
               </div>
-              <p>An Aspiring Front-End Web Developer / Software Engineer</p>
+              <p class="slogan animate__animated">An Aspiring Front-End Web Developer / Software Engineer</p>
               <div class="mousey">
                 <a href="#about">
                   <div class='mouse-wrapper'>
@@ -298,65 +300,74 @@
         <div class="container">
           <h2 class="head">MY WORKS</h2>
 
-          <h3 class="titles">Websites</h3>
-          <div class="flex_wrapper">
-            <div class="parent_box">
-              <div class="box john_cycling"></div>
-              <div class="show show2">
-                <div class="animate_up">
-                  <h4>JOHNS Cycling Shop Website</h4>
-                  <p>Simple Shopping Website
-                    using
-                    HTML and CSS</p>
+          <div class="parenty">
+            <h3 data-aos="fade-up"
+              data-aos-duration="1000" 
+              data-aos-once="true"
+              class="titles">Websites</h3>
+            <div data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              class="flex_wrapper">
+              <div class="parent_box">
+                <div class="box john_cycling"></div>
+                <div class="show show2">
+                  <div class="animate_up">
+                    <h4>JOHNS Cycling Shop Website</h4>
+                    <p>Simple Shopping Website
+                      using
+                      HTML and CSS</p>
+                  </div>
+                  <div class="animate_down">
+                    <a
+                      href="https://nel-lim.github.io/john_maizo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visit Site</a
+                    >
+                  </div>
                 </div>
-                <div class="animate_down">
-                  <a
-                    href="https://nel-lim.github.io/john_maizo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Visit Site</a
-                  >
+              </div>
+              <div class="parent_box clipboard_parent">
+                <div class="box clipboard"></div>
+                <div class="show">
+                  <div class="animate_up">
+                    <h4>Clipboard Landing Page</h4>
+                    <p>
+                      This is a solution to the "Clipboard landing page" challenge on Frontend Mentor challenges
+                    </p>
+                  </div>
+                  <div class="animate_down">
+                    <a href="https://clipboard-landing-page-johnmaizo.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                  </div>
+                </div>
+              </div>
+              <div class="parent_box news_parent">
+                <div class="box news_homepage"></div>
+                <div class="show">
+                  <div class="animate_up">
+                    <h4>News Homepage</h4>
+                    <p>
+                      This is a solution to the "News homepage" challenge on Frontend Mentor challenges
+                    </p>
+                  </div>
+                  <div class="animate_down">
+                    <a href="https://news-homepage-johnmaizo.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="parent_box clipboard_parent">
-              <div class="box clipboard"></div>
-              <div class="show">
-                <div class="animate_up">
-                  <h4>Clipboard Landing Page</h4>
-                  <p>
-                    This is a solution to the "Clipboard landing page" challenge on Frontend Mentor challenges
-                  </p>
-                </div>
-                <div class="animate_down">
-                  <a href="https://clipboard-landing-page-johnmaizo.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Site</a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="parent_box news_parent">
-              <div class="box news_homepage"></div>
-              <div class="show">
-                <div class="animate_up">
-                  <h4>News Homepage</h4>
-                  <p>
-                    This is a solution to the "News homepage" challenge on Frontend Mentor challenges
-                  </p>
-                </div>
-                <div class="animate_down">
-                  <a href="https://news-homepage-johnmaizo.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Site</a>
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <hr class="line" />
 
-          <h3 class="titles">Java Programs</h3>
-          <div class="flex_wrapper">
+          <h3 data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true" class="titles">Java Programs</h3>
+
+          <div data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true" class="flex_wrapper">
 
             <div class="parent_box java1_parent">
               <div class="box java1"></div>
@@ -400,8 +411,14 @@
 
           <hr class="line" />
 
-          <h3 class="titles">C Programs</h3>
-          <div class="flex_wrapper">
+          <h3 data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+           class="titles">C Programs</h3>
+
+          <div data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true" class="flex_wrapper">
             <div class="parent_box c1_parent">
               <div class="box c1"></div>
               <div class="show">
@@ -527,5 +544,9 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

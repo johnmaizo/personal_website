@@ -151,11 +151,58 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// ! reset the site when refreshing the webpage
+if(window.location.hash) {
+  window.location.replace("index.html");
+}
+
+history.scrollRestoration = "manual";
+
+$(document).ready(function(){
+  $(this).scrollTop(0);
+  document.body.style.overflow = "hidden"; // ! ILISI RA ONYA
+});
+
 // ! for loading screen
 $(window).load(function() {
-  // Animate loader off screen
-  $(".loading").fadeOut("slow");;
+  $(".loading").fadeOut("slow");
+
+  setTimeout(function() {
+    $(".hello").addClass("showy");
+    $(".hello").addClass("animate__fadeInUp");
+  }, 700);
+
+  setTimeout(function() {
+      $(".iAm").addClass("show");
+      $(".iAm").addClass("animate__fadeInUp");
+  }, 1400);
+
+  setTimeout(() => {
+      $(".namey").addClass("showy");
+      $(".namey").addClass("animate__fadeIn");
+  }, 2400);
+
+  setTimeout(() => {
+      $(".slogan").addClass("show");
+      $(".slogan").addClass("animate__fadeInDown");
+  }, 3800);
+
+  setTimeout(() => {
+      $(".primary_nav").addClass("primary_nav-animate");
+  }, 5500);
+  
+  setTimeout(() => {
+      $(".buttony").addClass("buttony_move");
+  }, 5500);
+
+  setTimeout(() => {
+      $(".mousey").addClass("mousey_orig");
+  }, 5700);
+  
+  // ! SCROLL
+  setTimeout(function() {
+    document.body.style.overflow = "auto";
+  }, 5500);
+
 });
 // Ends here
-
-
