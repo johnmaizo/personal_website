@@ -4,9 +4,6 @@ const primaryNav = document.querySelector(".primary_nav");
 const hamburger = document.querySelector(".hamburger");
 
 navToggle.addEventListener("click", () => {
-  primaryNav.hasAttribute("data-visible")
-    ? navToggle.setAttribute("aria-expanded", true)
-    : navToggle.setAttribute("aria-expanded", false);
   primaryNav.toggleAttribute("data-visible");
   hamburger.toggleAttribute("data-hamburger");
   primaryNav.toggleAttribute("data-animate");
@@ -14,14 +11,19 @@ navToggle.addEventListener("click", () => {
   inviButton.toggleAttribute("data-hide");
   navToggle.toggleAttribute("data-fixed");
   navToggle.toggleAttribute("data-show");
+  if(primaryNav.hasAttribute("data-visible")) {
+    navToggle.setAttribute("aria-expanded", true);
+  }
+  else {
+    navToggle.setAttribute("aria-expanded", false);
+  }
 });
 
 const inviButton = document.querySelector(".invisible");
 
 inviButton.addEventListener("click", () => {
   if (primaryNav.hasAttribute("data-animate")) {
-
-
+    
     primaryNav.toggleAttribute("data-animate");
     
     hamburger.toggleAttribute("data-hamburger");
@@ -29,11 +31,44 @@ inviButton.addEventListener("click", () => {
     inviButton.toggleAttribute("data-hide");
     navToggle.toggleAttribute("data-fixed");
     navToggle.toggleAttribute("data-show");
+
+    primaryNav.toggleAttribute("data-visible");
+  }
+  
+  if(primaryNav.hasAttribute("data-visible")) {
+    navToggle.setAttribute("aria-expanded", true);
+  }
+  else {
+    navToggle.setAttribute("aria-expanded", false);
   }
   
 });
 
-// Animation below
+// ! Mobile When Scrolling 
+let timeoutId;
+
+window.addEventListener("scroll", () => {
+  /*
+  if (!navToggle.hasAttribute("data-show")) {
+    clearTimeout(timeoutId);
+    navToggle.setAttribute("data-transparency", false);
+  
+    timeoutId = setTimeout(function() {
+      navToggle.setAttribute("data-transparency", true);
+    }, 200);
+  }
+  */
+  if (navToggle.getAttribute("aria-expanded") === "false") {
+    clearTimeout(timeoutId);
+    navToggle.setAttribute("data-transparency", false);
+  
+    timeoutId = setTimeout(function() {
+      navToggle.setAttribute("data-transparency", true);
+    }, 200);
+  }
+});
+
+// ! Animation below
 
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -136,21 +171,6 @@ function navHighlighter() {
   });
 }
 
-
-// ! Mobile When Scrolling 
-let timeoutId;
-
-window.addEventListener("scroll", () => {
-  if (!navToggle.hasAttribute("data-show")) {
-    clearTimeout(timeoutId);
-    navToggle.setAttribute("data-transparency", false);
-  
-    timeoutId = setTimeout(function() {
-      navToggle.setAttribute("data-transparency", true);
-    }, 200);
-  }
-});
-
 // ! reset the site when refreshing the webpage
 if(window.location.hash) {
   window.location.replace("index.html");
@@ -170,40 +190,39 @@ $(window).load(function() {
   setTimeout(function() {
     $(".hello").addClass("showy");
     $(".hello").addClass("animate__fadeInUp");
-  }, 700);
+  }, 1000);
 
   setTimeout(function() {
       $(".iAm").addClass("show");
       $(".iAm").addClass("animate__fadeInUp");
-  }, 1400);
+  }, 1700);
 
   setTimeout(() => {
-      // $(".namey").addClass("showy");
-      // $(".namey").addClass("animate__fadeIn");
       $(".namey").addClass("width100");
-  }, 2400);
+  }, 2700);
 
   setTimeout(() => {
       $(".slogan").addClass("show");
       $(".slogan").addClass("animate__fadeInDown");
-  }, 4200);
+  }, 4500);
 
   setTimeout(() => {
       $(".primary_nav").addClass("primary_nav-animate");
-  }, 5800);
-  
+    }, 6100);
+    
   setTimeout(() => {
       $(".buttony").addClass("buttony_move");
-  }, 5800);
+  }, 6100);
 
   setTimeout(() => {
       $(".mousey").addClass("mousey_orig");
-  }, 7200);
+      $(".primary_nav").addClass("primary_nav_remove_transition");
+  }, 7500);
   
   // ! SCROLL
   setTimeout(function() {
     document.body.style.overflow = "auto";
-  }, 5800);
+  }, 6750);
 
 });
 // Ends here

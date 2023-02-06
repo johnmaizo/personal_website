@@ -197,7 +197,7 @@ a {
 header .buttony {
   display: none;
 
-  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  /* transition: all 1.5s cubic-bezier(0.77, 0.2, 0.05, 1); */
 }
 
 header .invisible {
@@ -281,7 +281,7 @@ header .invisible {
 
     -webkit-touch-callout: none;
 
-    transition: 200ms ease;
+    transition: 1s ease;
   }
 
   header .invisible {
@@ -1696,11 +1696,16 @@ footer .copyright {
     transform: translateY(-5em);
     transition: all 1.3s ease;
   }
-  
+
   header .primary_nav-animate {
     opacity: 1;
     transform: none;
   }
+
+  header .primary_nav_remove_transition {
+    transition: none;
+  }
+  
 
 }
 
