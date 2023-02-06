@@ -131,7 +131,8 @@ a {
 
   header nav .Logo_nav p {
     position: relative;
-    font-family: "IBM Plex Mono", monospace;
+    /* font-family: "IBM Plex Mono", monospace; */
+    font-family: 'Varela Round', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
     left: 7.8em;
@@ -1289,7 +1290,7 @@ header .invisible {
 }
 
 .work_module .parent_box .show .animate_up {
-  transform: translateY(-4em);
+  transform: translateY(-8em);
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
