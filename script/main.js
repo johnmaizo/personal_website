@@ -180,7 +180,7 @@ history.scrollRestoration = "manual";
 
 $(document).ready(function(){
   $(this).scrollTop(0);
-  // document.body.style.overflow = "hidden"; // ! ILISI RA ONYA
+  document.body.style.overflow = "hidden"; // ! ILISI RA ONYA
 });
 
 // ! for loading screen
