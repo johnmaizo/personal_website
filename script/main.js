@@ -190,39 +190,39 @@ $(window).load(function() {
   setTimeout(function() {
     $(".hello").addClass("showy");
     $(".hello").addClass("animate__fadeInUp");
-  }, 1000);
+  }, 1200);
 
   setTimeout(function() {
       $(".iAm").addClass("show");
       $(".iAm").addClass("animate__fadeInUp");
-  }, 1700);
+  }, 1900);
 
   setTimeout(() => {
       $(".namey").addClass("width100");
-  }, 2700);
+  }, 2900);
 
   setTimeout(() => {
       $(".slogan").addClass("show");
       $(".slogan").addClass("animate__fadeInDown");
-  }, 4500);
+  }, 4700);
 
   setTimeout(() => {
       $(".primary_nav").addClass("primary_nav-animate");
-    }, 6100);
+    }, 6300);
     
   setTimeout(() => {
       $(".buttony").addClass("buttony_move");
-  }, 6100);
+  }, 6300);
 
   setTimeout(() => {
       $(".mousey").addClass("mousey_orig");
       $(".primary_nav").addClass("primary_nav_remove_transition");
-  }, 7500);
+  }, 7700);
   
   // ! SCROLL
   setTimeout(function() {
     document.body.style.overflow = "auto";
-  }, 6750);
+  }, 7400);
 
 });
 // Ends here
